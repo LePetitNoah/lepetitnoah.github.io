@@ -81,3 +81,39 @@ body{
 .checked{
     color: orange;
 }
+
+.projets-personnels>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 10px;
+    color: #212121;
+}
+
+.card>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.illustration{
+    width: 200px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.tech{
+    width: 48px;
+    margin: 5px;
+}
