@@ -18,7 +18,7 @@ body{
 }
 
 .homepage{
-    margin: 0px 15px 200px 15px;
+    margin: 50px 15px 200px 15px;
     text-align: center;
     border-top: 1px solid beige;
     border-bottom: 1px solid beige;
@@ -37,8 +37,18 @@ body{
     margin: 10px 0px 10px 0px;
 }
 
-.presentation{
-    margin: 0px 25px 0px 25px;
+.presentation, .competences, .projets-scolaires, .projets-personnels{
+    margin: 100px 25px 0px 25px;
+}
+
+.presentation h2, .competences h2, .projets-scolaires h2, .projets-personnels h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 10px 0px 10px 0px;
+    background-color: azure;
+    color: #212121;
+    border-radius: 10px;
 }
 
 .presentation p{
