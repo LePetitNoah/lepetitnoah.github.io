@@ -54,3 +54,30 @@ body{
 .presentation p{
     margin: 5px 0px 0px 0px;
 }
+
+.competences>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    align-items: center;
+}
+
+.icon{
+    width: 90px;
+    height: 90px;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: azure;
+    border-radius: 30%;
+}
+
+.checked{
+    color: orange;
+}
