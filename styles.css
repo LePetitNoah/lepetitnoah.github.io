@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    background-color: #212121;
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.logo img{
+    width: 128px;
+}
+
+.homepage{
+    margin: 0px 15px 200px 15px;
+    text-align: center;
+    border-top: 1px solid beige;
+    border-bottom: 1px solid beige;
+}
+
+.homepage h2{
+    color: beige;
+    margin: 10px 0px 10px 0px;
+}
+
+.homepage h1{
+    margin: 10px 0px 10px 0px;
+}
+
+.homepage h3{
+    margin: 10px 0px 10px 0px;
+}
+
+.presentation{
+    margin: 0px 15px 0px 15px;
+}
