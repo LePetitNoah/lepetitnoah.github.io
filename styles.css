@@ -10,7 +10,7 @@ body{
 .logo{
     display: flex;
     justify-content: center;
-    margin: 50px 0px 50px 0px;
+    margin: 150px 0px 50px 0px;
 }
 
 .logo img{
@@ -38,5 +38,9 @@ body{
 }
 
 .presentation{
-    margin: 0px 15px 0px 15px;
+    margin: 0px 25px 0px 25px;
+}
+
+.presentation p{
+    margin: 5px 0px 0px 0px;
 }
