@@ -59,7 +59,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:space-between;
 }
 
 .skill{
@@ -76,7 +76,7 @@ body{
     border-radius: 30%;
 }
 
-.flip-card {
+.flip-card-skill {
     width: 90px;
     height: 90px;
     padding: 8px;
@@ -87,7 +87,7 @@ body{
 }
 
 /* This container is needed to position the front and back side */
-.flip-card-inner {
+.flip-card-inner-skill {
     position: relative;
     width: 100%;
     height: 100%;
@@ -97,12 +97,12 @@ body{
 }
   
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip-card-skill:hover .flip-card-inner-skill {
     transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front-skill, .flip-card-back-skill {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -114,27 +114,27 @@ body{
 }
 
 /* Style the front side (fallback if image is missing) */
-.flip-card-front {
+.flip-card-front-skill {
     background-color: azure;
     color: black;
 }
 
 /* Style the back side */
-.flip-card-back {
+.flip-card-back-skill {
     background-color: azure;
     color: #212121;
     transform: rotateY(180deg);
 }
 
-.flip-card-back>p{
+.flip-card-back-skill>p{
     margin: 0;
 }
 
-.flip-card-back>.desc{
+.flip-card-back-skill>.desc-skill{
     margin: 5px 0px 10px 0px;
 }
 
-.desc{
+.desc-skill{
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -151,14 +151,60 @@ body{
 }
 
 .card{
+    color: #212121;
+    margin-bottom: 30px;
+}
+
+.flip-card-projet {
+    height: 252px;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: azure;
+    border-radius: 10px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner-projet {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-projet:hover .flip-card-inner-projet {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front-projet, .flip-card-back-projet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+    padding: 1px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front-projet {
+    background-color: azure;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back-projet {
     background-color: azure;
     color: #212121;
-    padding: 10px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+    transform: rotateY(180deg);
 }
 
 .card>div{
