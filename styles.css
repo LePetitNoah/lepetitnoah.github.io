@@ -38,7 +38,7 @@ body{
 }
 
 .presentation, .competences, .projets-scolaires, .projets-personnels{
-    margin: 100px 25px 0px 25px;
+    margin: 60px 25px 0px 25px;
 }
 
 .presentation h2, .competences h2, .projets-scolaires h2, .projets-personnels h2{
@@ -124,6 +124,20 @@ body{
     background-color: azure;
     color: #212121;
     transform: rotateY(180deg);
+}
+
+.flip-card-back>p{
+    margin: 0;
+}
+
+.flip-card-back>.desc{
+    margin: 5px 0px 10px 0px;
+}
+
+.desc{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
 }
 
 .checked{
