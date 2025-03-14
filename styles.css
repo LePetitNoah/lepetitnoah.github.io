@@ -202,6 +202,9 @@ body{
 
 /* Style the back side */
 .flip-card-back-projet {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     background-color: azure;
     color: #212121;
     transform: rotateY(180deg);
@@ -217,17 +220,34 @@ body{
     border-radius: 10px;
 }
 
-.title{
+.flip-card-front-projet>.title{
     font-weight: bold;
     font-size: 21px;
     margin: 5px 0px 5px 0px;
 }
 
+.flip-card-back-projet>.title{
+    font-weight: bold;
+    font-size: 21px;
+    margin: 10px 0px 10px 10px;
+}
+
 .description{
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 40px 10px;
+}
+
+.voir-plus{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tech-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .tech{
     width: 48px;
-    margin-right: 5px;
 }
