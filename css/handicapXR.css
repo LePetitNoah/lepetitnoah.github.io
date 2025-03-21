@@ -8,7 +8,7 @@ body{
 }
 
 body>div{
-    margin: 0px 15px 0px 15px;
+    margin: 30px 15px 30px 15px;
 }
 
 .logo{
@@ -34,9 +34,21 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 0px 50px 0px;
+    width: 100%;
 }
 
 .fonctionnalites>div{
-    margin: 25px 0px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.fonctionnalites>div>h3{
+    display: flex;
+    justify-content: center;
+}
+
+.fonctionnalites>div>img{
+    width: 100%;
 }
