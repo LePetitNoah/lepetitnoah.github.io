@@ -52,7 +52,7 @@ body{
 }
 
 .presentation p{
-    margin: 5px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 .competences>div{
@@ -156,9 +156,8 @@ body{
 }
 
 .flip-card-projet {
-    height: 252px;
+    height: 197px;
     padding: 8px;
-    margin-bottom: 15px;
     background-color: azure;
     border-radius: 10px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -233,7 +232,7 @@ body{
 }
 
 .description{
-    margin: 0px 0px 40px 10px;
+    margin: 0px 0px 20px 10px;
 }
 
 .voir-plus{
