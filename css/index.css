@@ -156,9 +156,7 @@ body{
 }
 
 .flip-card-projet {
-    height: 197px;
-    padding: 8px;
-    background-color: azure;
+    height: 200px;
     border-radius: 10px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -186,7 +184,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: azure;
+
     padding: 1px;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
@@ -194,7 +192,7 @@ body{
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front-projet {
-    background-color: azure;
+
     color: black;
 }
 
@@ -204,6 +202,7 @@ body{
     flex-direction: column;
     text-align: left;
     background-color: azure;
+    border-radius: 10px;
     color: #212121;
     transform: rotateY(180deg);
 }
