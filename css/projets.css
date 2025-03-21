@@ -29,6 +29,15 @@ h1{
     border-bottom: 1px solid beige;
 }
 
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info>p{
+    margin: 0;
+}
+
 .fonctionnalites{
     display: flex;
     flex-direction: column;
