@@ -34,21 +34,21 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
-.fonctionnalites>div{
+.fonctionnalite{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 20px 0px 20px 0px;
 }
 
-.fonctionnalites>div>h3{
+.fonctionnalite>h3{
     display: flex;
     justify-content: center;
 }
 
-.fonctionnalites>div>img{
+.fonctionnalite>img{
     width: 100%;
+    border-radius: 10px;
 }
