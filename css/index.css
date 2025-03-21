@@ -144,7 +144,7 @@ body{
     color: orange;
 }
 
-.projets-personnels>div{
+.projets-personnels>div, .projets-scolaires>div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,6 +157,7 @@ body{
 
 .flip-card-projet {
     height: 200px;
+    max-width: 300px;
     border-radius: 10px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -191,7 +192,6 @@ body{
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front-projet {
-
     color: black;
 }
 
