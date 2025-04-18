@@ -15,7 +15,7 @@ body{
 
 header{
     text-align: center;
-    margin: 50px 0 120px 0;
+    margin: 50px 0 0 0;
 }
 
 header>h1{
@@ -27,6 +27,20 @@ header>h2{
     font-size: 28px;
     font-weight: normal;
     margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.contexte{
+  margin: 0 200px 50px 200px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contexte img{
+    border-radius: 10px;
+    max-height: 200px;
+    margin-left: 20px;
 }
 
 .mainAside{
@@ -52,6 +66,7 @@ main{
   margin: 0 20px 40px 20px;
   padding: 20px;
   width: 300px;
+  text-align: center;
 }
 
 .etapes .etape img {
@@ -59,6 +74,7 @@ main{
   height: 150px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  margin-bottom: 10px
 }
 
 .etapes .etape h2 {
@@ -97,7 +113,7 @@ aside{
 }
 
 .time>img{
-    margin-right: 15px;
+    margin-right: 50px;
 }
 
 #time{
