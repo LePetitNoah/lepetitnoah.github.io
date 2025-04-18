@@ -3,7 +3,7 @@ window.addEventListener("load", async () => {
     let loader = document.getElementById("loader");
     loader.addEventListener("click", () => {
 
-        fetch("https://api.data.gov.my/weather/forecast")
+        fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Seri%20Iskandar?unitGroup=us&key=YOUR_API_KEY&contentType=json")
         .then(response => response.json())
         .then(json => {
             console.log(json);
