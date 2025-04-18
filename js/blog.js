@@ -30,17 +30,16 @@ function changeWeather(elems){
 
     console.log("Change weather called");
 
-    const daysElement = [];
-    for(let i=0; i<3; i++){
-        daysElement[i] = document.getElementById("day" + i+1);
-    }
+    const day1 = document.getElementById("day1");
+    const day2 = document.getElementById("day2");
+    const day3 = document.getElementById("day3");
 
     const days = [];
     for(let i=0; i<3; i++){
         days[i] = elems.days[i];
     }
 
-    for(let i=0; i<daysElement.length; i++){
-        daysElement[i].innerHTML = "Températures actuelles en Malaisie : " + days[i].feelslike;
-    }
+    day1.innerHTML = "Température actuelle en Malaisie : " + days[0].feelslike;
+    day2.innerHTML = "Température actuelle en Malaisie : " + days[1].feelslike;
+    day3.innerHTML = "Température actuelle en Malaisie : " + days[2].feelslike;
 }
