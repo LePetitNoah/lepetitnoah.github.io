@@ -7,7 +7,7 @@ window.addEventListener("load", async () => {
         document.body.onload = changeTime(json);
     });
 
-    fetch("https://api.data.gov.my/weather/forecast?contains=<prefix>@location__Tn001")
+    fetch("https://api.data.gov.my/weather/forecast")
     .then(response => response.json())
     .then(json => {
         console.log(json);
