@@ -1,12 +1,5 @@
 window.addEventListener("load", async () => {
 
-    fetch("https://api.data.gov.my/weather/forecast")
-    .then(response => response.json())
-    .then(json => {
-        console.log(json);
-        document.body.onload = changeTime(json);
-    });
-
     let loader = document.getElementById("loader");
     loader.addEventListener("click", () => {
 
@@ -15,6 +8,12 @@ window.addEventListener("load", async () => {
         .then(json => {
             console.log(json);
             document.body.onload = changeTime(json);
+        });
+
+        fetch("https://api.data.gov.my/weather/forecast")
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
         });
     });
 });
