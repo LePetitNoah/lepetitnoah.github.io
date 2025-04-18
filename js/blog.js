@@ -1,18 +1,18 @@
+window.addEventListener("load", async () => {
 
-// Define the API URL
-const apiUrl = 'https://timeapi.io/api/time/current/zone?timeZone=Asia%2FSingapore';
+    let loader = document.getElementById("loader");
+    loader.addEventListener("click", () => {
 
-// Make a GET request
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+        fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia%2FSingapore")
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+            document.body.onload = changeTime(json);
+        });
+    });
+});
+
+function changeTime(elem){
+    const time = document.getElementById("time");
+    time.innerHTML = elem.time;
+}
