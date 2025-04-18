@@ -3,18 +3,19 @@ window.addEventListener("load", async () => {
     let loader = document.getElementById("loader");
     loader.addEventListener("click", () => {
 
-        fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Seri%20Iskandar?unitGroup=us&key=YOUR_API_KEY&contentType=json")
+        fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Seri%20Iskandar?unitGroup=metric&include=current&key=4ULXBJL7H77CEEB28PQE8N8F2&contentType=json")
         .then(response => response.json())
         .then(json => {
             console.log(json);
         });
-
+        /*
         fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia%2FSingapore")
         .then(response => response.json())
         .then(json => {
             console.log(json);
             document.body.onload = changeTime(json);
         });
+        */
     });
 });
 
