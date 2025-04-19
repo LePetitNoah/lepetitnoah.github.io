@@ -41,7 +41,7 @@ function changeWeather(elems){
         days[i] = elems.days[i];
     }
 
-    day1.innerHTML = "Température actuelle en Malaisie : " + days[0].feelslike + "C°";
-    day2.innerHTML = "Température prévue demain en Malaisie : " + days[1].feelslike + "C°";
-    day3.innerHTML = "Température prévue après-demain en Malaisie : " + days[2].feelslike + "C°";
+    day1.innerHTML = "Aujourd'hui : " + days[0].feelslike + "C°";
+    day2.innerHTML = "Demain : " + days[1].feelslike + "C°";
+    day3.innerHTML = "Après-demain : " + days[2].feelslike + "C°";
 }
