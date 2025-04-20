@@ -62,7 +62,7 @@ main{
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.758);
   margin: 0 20px 40px 20px;
   padding: 20px;
-  width: 300px;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -79,7 +79,15 @@ main{
 
 .etapes .etape img {
   width: 100%;
-  height: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px
+}
+
+.etapes .etape video {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   margin-bottom: 10px
@@ -161,6 +169,7 @@ aside{
   .contexte>img{
     margin: 0;
   }
+  
   .mainAside{
     flex-direction: column;
   }
@@ -179,6 +188,10 @@ aside{
   .etapes .etape{
     margin: 0 0 40px 0;
     width: 100%;
+  }
+
+  .etapes .etape img{
+    height: 150px;
   }
 
   aside{
