@@ -2,6 +2,16 @@ window.addEventListener("load", async () => {
 
     setInterval(fetchTime, 10000);
     fetchWeather();
+
+      document.getElementById('hide').addEventListener('change', function() {
+        if (this.checked) {
+          document.getElementById('anecdotes').style.display = 'none';
+          document.getElementById('image').src = '/img/blog/show.png';
+        } else {
+          document.getElementById('anecdotes').style.display = 'block';
+          document.getElementById('image').src = '/img/blog/hide.png';
+        }
+      });
 });
 
 function fetchTime(){
