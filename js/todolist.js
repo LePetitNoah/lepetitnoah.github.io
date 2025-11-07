@@ -32,51 +32,56 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderTasks();
             };
             li.appendChild(label);
-            // Edit button (...)
-            if (cat !== 'Général') {
-                const editBtn = document.createElement('button');
-                editBtn.textContent = '...';
-                editBtn.className = 'edit-category-btn';
-                editBtn.title = 'Renommer la catégorie';
-                editBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    const newName = prompt('Nouveau nom de la catégorie :', cat);
-                    if (newName && !categories.includes(newName)) {
-                        const idx = categories.indexOf(cat);
-                        categories[idx] = newName;
-                        tasksByCategory[newName] = tasksByCategory[cat];
-                        delete tasksByCategory[cat];
-                        if (currentCategory === cat) currentCategory = newName;
-                        saveToStorage();
-                        renderCategories();
-                        renderTasks();
+            // Edit and delete buttons for all categories
+            const editBtn = document.createElement('button');
+            editBtn.textContent = '...';
+            editBtn.className = 'edit-category-btn';
+            editBtn.title = 'Renommer la catégorie';
+            editBtn.onclick = function(e) {
+                e.stopPropagation();
+                const newName = prompt('Nouveau nom de la catégorie :', cat);
+                if (newName && !categories.includes(newName)) {
+                    const idx = categories.indexOf(cat);
+                    categories[idx] = newName;
+                    tasksByCategory[newName] = tasksByCategory[cat];
+                    delete tasksByCategory[cat];
+                    if (currentCategory === cat) currentCategory = newName;
+                    saveToStorage();
+                    renderCategories();
+                    renderTasks();
+                }
+            };
+            li.appendChild(editBtn);
+            const delBtn = document.createElement('button');
+            delBtn.innerHTML = '&times;';
+            delBtn.className = 'delete-category-btn';
+            delBtn.title = 'Supprimer la catégorie';
+            delBtn.onclick = function(e) {
+                e.stopPropagation();
+                if (confirm('Supprimer la catégorie et toutes ses tâches ?')) {
+                    const idx = categories.indexOf(cat);
+                    categories.splice(idx, 1);
+                    delete tasksByCategory[cat];
+                    if (currentCategory === cat) {
+                        currentCategory = categories[0] || '';
                     }
-                };
-                li.appendChild(editBtn);
-                // Delete button (red cross)
-                const delBtn = document.createElement('button');
-                delBtn.innerHTML = '&times;';
-                delBtn.className = 'delete-category-btn';
-                delBtn.title = 'Supprimer la catégorie';
-                delBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    if (confirm('Supprimer la catégorie et toutes ses tâches ?')) {
-                        const idx = categories.indexOf(cat);
-                        categories.splice(idx, 1);
-                        delete tasksByCategory[cat];
-                        if (currentCategory === cat) {
-                            currentCategory = categories[0];
-                        }
-                        saveToStorage();
-                        renderCategories();
-                        renderTasks();
-                    }
-                };
-                li.appendChild(delBtn);
-            }
+                    saveToStorage();
+                    renderCategories();
+                    renderTasks();
+                }
+            };
+            li.appendChild(delBtn);
             li.className = (cat === currentCategory) ? 'active-category' : '';
             categoriesTabs.appendChild(li);
         });
+
+        // Remove default 'Général' category if present and not wanted
+        if (categories.length === 1 && categories[0] === 'Général') {
+            categories = [];
+            tasksByCategory = {};
+            currentCategory = '';
+            saveToStorage();
+        }
     }
 
     addCategoryBtn.onclick = function() {

@@ -32,12 +32,22 @@
         --input-border: #444;
     }
 }
+html, body {
+    background: var(--bg) !important;
+    min-height: 100vh;
+    width: 100vw;
+}
 body {
     font-family: Arial, sans-serif;
     background: var(--bg);
     margin: 0;
     padding: 0;
     color: var(--text);
+    min-height: 100vh;
+}
+html {
+    background: var(--bg);
+    min-height: 100vh;
 }
 .container {
     max-width: 420px;
@@ -211,8 +221,31 @@ li.completed .complete-btn {
 #categories-tabs li.active-category {
     background: var(--category-active);
     color: var(--category-active-text);
-    font-weight: bold;
     border-bottom: 2px solid var(--primary);
+}
+#categories-tabs li.active-category .edit-category-btn {
+    /* Always show the edit button, even for the active category */
+    color: var(--container-bg);
+    background: none;
+    opacity: 1;
+}
+#categories-tabs li.active-category .edit-category-btn:hover {
+    background: #e3f0ff;
+    color: var(--primary-dark);
+}
+#categories-tabs li.active-category .delete-category-btn {
+    /* Always show the delete button, even for the active category */
+    color: var(--danger);
+    background: none;
+    opacity: 1;
+}
+#categories-tabs li.active-category .delete-category-btn:hover {
+    background: #ffcdd2;
+    color: var(--danger-dark);
+}
+/* Remove default category 'Général' visually if still present (JS should remove it from data, but CSS can hide as fallback) */
+#categories-tabs li[data-category="Général"] {
+    display: none !important;
 }
 #add-category-btn {
     background: var(--success);
