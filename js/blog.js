@@ -30,6 +30,7 @@ function fetchWeather(){
             document.body.onload = changeWeather(json);
     });
 }
+
 function changeTime(elem){
 
     console.log("Change time called");
