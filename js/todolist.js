@@ -84,13 +84,29 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         const taskText = input.value.trim();
+        const descInput = document.getElementById('new-task-desc');
+        const taskDesc = descInput ? descInput.value.trim() : '';
         if (taskText !== '') {
-            tasksByCategory[currentCategory].push({ text: taskText, completed: false });
+            tasksByCategory[currentCategory].push({ text: taskText, desc: taskDesc, completed: false });
             input.value = '';
+            if (descInput) descInput.value = '';
             saveToStorage();
             renderTasks();
         }
     });
+
+    // Helper: Simple Markdown to HTML (bold, italic, link, linebreak, checkboxes)
+    function renderMarkdown(text) {
+        if (!text) return '';
+        let html = text
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // bold
+            .replace(/\*(.*?)\*/g, '<em>$1</em>') // italic
+            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>') // link
+            .replace(/\[ \]/g, '<input type="checkbox" disabled>') // unchecked checkbox
+            .replace(/\[x\]/gi, '<input type="checkbox" checked disabled>') // checked checkbox
+            .replace(/\n/g, '<br>'); // linebreak
+        return html;
+    }
 
     function renderTasks() {
         tasksList.innerHTML = '';
@@ -111,6 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderTasks();
             };
             // Task text
+            const textContainer = document.createElement('div');
+            textContainer.style.flex = '1';
+            textContainer.style.display = 'flex';
+            textContainer.style.flexDirection = 'column';
+            // Title (editable)
             const span = document.createElement('span');
             span.textContent = task.text;
             span.style.cursor = 'pointer';
@@ -120,14 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 editInput.value = span.textContent;
                 editInput.className = 'edit-task-input';
                 editInput.style.flex = '1';
-                li.replaceChild(editInput, span);
+                textContainer.replaceChild(editInput, span);
                 editInput.focus();
                 function saveEdit() {
                     if (editInput.value.trim() !== '') {
                         task.text = editInput.value.trim();
                         saveToStorage();
                     }
-                    li.replaceChild(span, editInput);
+                    textContainer.replaceChild(span, editInput);
                     renderTasks();
                 }
                 editInput.addEventListener('blur', saveEdit);
@@ -135,10 +156,58 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (e.key === 'Enter') {
                         saveEdit();
                     } else if (e.key === 'Escape') {
-                        li.replaceChild(span, editInput);
+                        textContainer.replaceChild(span, editInput);
                     }
                 });
             };
+            textContainer.appendChild(span);
+            // Description (editable, markdown)
+            const desc = document.createElement('small');
+            desc.className = 'task-desc';
+            desc.style.cursor = 'pointer';
+            desc.style.opacity = '0.8';
+            desc.innerHTML = renderMarkdown(task.desc || '');
+            // Enable ticking checkboxes in description
+            Array.from(desc.querySelectorAll('input[type="checkbox"]')).forEach((checkbox, i) => {
+                checkbox.disabled = false;
+                checkbox.addEventListener('change', function(e) {
+                    // Find all checkboxes in the markdown string
+                    let matches = [...(task.desc || '').matchAll(/\[( |x)\]/gi)];
+                    if (matches[i]) {
+                        // Replace the i-th checkbox in the markdown string
+                        let before = (task.desc || '').slice(0, matches[i].index);
+                        let after = (task.desc || '').slice(matches[i].index + 3);
+                        let newBox = checkbox.checked ? '[x]' : '[ ]';
+                        task.desc = before + newBox + after;
+                        saveToStorage();
+                        renderTasks();
+                    }
+                });
+            });
+            desc.ondblclick = function() {
+                const editDesc = document.createElement('input');
+                editDesc.type = 'text';
+                editDesc.value = task.desc || '';
+                editDesc.className = 'edit-task-input';
+                editDesc.style.flex = '1';
+                textContainer.replaceChild(editDesc, desc);
+                editDesc.focus();
+                function saveEditDesc() {
+                    task.desc = editDesc.value.trim();
+                    saveToStorage();
+                    textContainer.replaceChild(desc, editDesc);
+                    renderTasks();
+                }
+                editDesc.addEventListener('blur', saveEditDesc);
+                editDesc.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        saveEditDesc();
+                    } else if (e.key === 'Escape') {
+                        textContainer.replaceChild(desc, editDesc);
+                    }
+                });
+            };
+            textContainer.appendChild(desc);
             // Delete button
             const delBtn = document.createElement('button');
             delBtn.textContent = 'Delete';
@@ -149,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderTasks();
             };
             li.appendChild(completeBtn);
-            li.appendChild(span);
+            li.appendChild(textContainer);
             li.appendChild(delBtn);
             tasksList.appendChild(li);
         });
