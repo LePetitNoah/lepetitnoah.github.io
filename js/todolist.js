@@ -21,13 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
         categoriesTabs.innerHTML = '';
         categories.forEach(cat => {
             const li = document.createElement('li');
-            // Label (click to edit)
+            // Label (select category)
             const label = document.createElement('span');
             label.textContent = cat;
             label.style.cursor = 'pointer';
-            label.onclick = function(e) {
-                // Edit category name on click (not on delete)
-                if (cat !== 'Général') {
+            label.onclick = function() {
+                currentCategory = cat;
+                saveToStorage();
+                renderCategories();
+                renderTasks();
+            };
+            li.appendChild(label);
+            // Edit button (✏️)
+            if (cat !== 'Général') {
+                const editBtn = document.createElement('button');
+                editBtn.textContent = '✏️';
+                editBtn.className = 'edit-category-btn';
+                editBtn.title = 'Renommer la catégorie';
+                editBtn.onclick = function(e) {
+                    e.stopPropagation();
                     const newName = prompt('Nouveau nom de la catégorie :', cat);
                     if (newName && !categories.includes(newName)) {
                         const idx = categories.indexOf(cat);
@@ -39,11 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         renderCategories();
                         renderTasks();
                     }
-                }
-            };
-            li.appendChild(label);
-            // Delete button (red cross)
-            if (cat !== 'Général') {
+                };
+                li.appendChild(editBtn);
+                // Delete button (red cross)
                 const delBtn = document.createElement('button');
                 delBtn.innerHTML = '&times;';
                 delBtn.className = 'delete-category-btn';
@@ -102,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // bold
             .replace(/\*(.*?)\*/g, '<em>$1</em>') // italic
             .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>') // link
-            .replace(/\[ \]/g, '<input type="checkbox" disabled>') // unchecked checkbox
-            .replace(/\[x\]/gi, '<input type="checkbox" checked disabled>') // checked checkbox
+            .replace(/\[ \]/g, '<input type="checkbox" class="desc-checkbox">') // unchecked checkbox
+            .replace(/\[x\]/gi, '<input type="checkbox" class="desc-checkbox" checked>') // checked checkbox
             .replace(/\n/g, '<br>'); // linebreak
         return html;
     }
@@ -169,12 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
             desc.innerHTML = renderMarkdown(task.desc || '');
             // Enable ticking checkboxes in description
             Array.from(desc.querySelectorAll('input[type="checkbox"]')).forEach((checkbox, i) => {
-                checkbox.disabled = false;
                 checkbox.addEventListener('change', function(e) {
-                    // Find all checkboxes in the markdown string
                     let matches = [...(task.desc || '').matchAll(/\[( |x)\]/gi)];
                     if (matches[i]) {
-                        // Replace the i-th checkbox in the markdown string
                         let before = (task.desc || '').slice(0, matches[i].index);
                         let after = (task.desc || '').slice(matches[i].index + 3);
                         let newBox = checkbox.checked ? '[x]' : '[ ]';
