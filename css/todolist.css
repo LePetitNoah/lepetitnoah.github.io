@@ -264,8 +264,7 @@ li.completed .complete-btn {
 }
 @media (max-width: 600px) {
     .container {
-        max-width: 85vw;
-        width: 85vw;
+        margin: 16px;
         padding: 4px 0 0 0;
         border-radius: 0;
     }
