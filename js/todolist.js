@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderTasks();
             };
             li.appendChild(label);
-            // Edit button (✏️)
+            // Edit button (...)
             if (cat !== 'Général') {
                 const editBtn = document.createElement('button');
-                editBtn.textContent = '✏️';
+                editBtn.textContent = '...';
                 editBtn.className = 'edit-category-btn';
                 editBtn.title = 'Renommer la catégorie';
                 editBtn.onclick = function(e) {
@@ -120,7 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function renderTasks() {
         tasksList.innerHTML = '';
-        (tasksByCategory[currentCategory] || []).forEach((task, idx) => {
+        // Sépare les tâches non terminées et terminées
+        const allTasks = tasksByCategory[currentCategory] || [];
+        const uncompleted = allTasks.filter(task => !task.completed);
+        const completed = allTasks.filter(task => task.completed);
+        // Affiche d'abord les non terminées, puis les terminées
+        [...uncompleted, ...completed].forEach((task, idx) => {
             const li = document.createElement('li');
             if (task.completed) li.classList.add('completed');
             // Complete button
@@ -220,9 +225,14 @@ document.addEventListener('DOMContentLoaded', function() {
             delBtn.textContent = 'Delete';
             delBtn.className = 'delete-btn';
             delBtn.onclick = function() {
-                tasksByCategory[currentCategory].splice(idx, 1);
-                saveToStorage();
-                renderTasks();
+                const all = tasksByCategory[currentCategory];
+                // Retrouve l'index réel de la tâche dans le tableau d'origine
+                const realIdx = all.indexOf(task);
+                if (realIdx !== -1) {
+                    all.splice(realIdx, 1);
+                    saveToStorage();
+                    renderTasks();
+                }
             };
             li.appendChild(completeBtn);
             li.appendChild(textContainer);

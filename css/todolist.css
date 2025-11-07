@@ -40,8 +40,8 @@ body {
     color: var(--text);
 }
 .container {
-    max-width: 480px;
-    width: 100vw;
+    max-width: 420px;
+    width: 92vw;
     margin: 0 auto;
     background: var(--container-bg);
     padding: 10px 0 10px 0;
@@ -62,7 +62,8 @@ h1 {
     flex-wrap: wrap;
 }
 #new-task-input, #new-task-desc {
-    flex: 1 1 100%;
+    flex: 1 1 0;
+    min-width: 0;
     padding: 10px;
     border: 1px solid var(--input-border);
     border-radius: 4px;
@@ -83,8 +84,18 @@ h1 {
     font-size: 1em;
     width: 100%;
 }
-#add-task-btn:hover {
-    background: var(--primary-dark);
+@media (min-width: 601px) {
+    #new-task-form {
+        flex-direction: row;
+        gap: 4px;
+    }
+    #new-task-input, #new-task-desc {
+        margin-bottom: 0;
+    }
+    #add-task-btn {
+        width: auto;
+        padding: 10px 16px;
+    }
 }
 ul#tasks {
     list-style: none;
@@ -217,20 +228,22 @@ li.completed .complete-btn {
 #add-category-btn:hover {
     background: var(--success-dark);
 }
-.edit-category-btn, .delete-category-btn {
+.edit-category-btn {
     background: none;
     border: none;
-    color: #888;
+    color: var(--primary);
     margin-left: 4px;
     cursor: pointer;
-    font-size: 1em;
-    padding: 2px 4px;
+    font-size: 1.2em;
+    padding: 2px 6px;
     border-radius: 3px;
     transition: background 0.2s, color 0.2s;
+    line-height: 1;
+    font-weight: bold;
 }
 .edit-category-btn:hover {
-    background: #ffe082;
-    color: #333;
+    background: #e3f0ff;
+    color: var(--primary-dark);
 }
 .delete-category-btn {
     background: none;
@@ -251,7 +264,8 @@ li.completed .complete-btn {
 }
 @media (max-width: 600px) {
     .container {
-        max-width: 100vw;
+        max-width: 85vw;
+        width: 85vw;
         padding: 4px 0 0 0;
         border-radius: 0;
     }
