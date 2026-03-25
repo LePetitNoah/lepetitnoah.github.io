@@ -1,3 +1,6 @@
+---
+---
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -17,8 +20,7 @@
   </head>
 
   <body>
-    <div w3-include-html="/components/orbs.html"></div>
-    <div w3-include-html="/components/header.html"></div>
+    {% include orbs.html %} {% include header.html %}
 
     <main>
       <div class="title-container">
@@ -26,8 +28,7 @@
       </div>
     </main>
 
-    <div w3-include-html="/components/footer.html"></div>
+    {% include footer.html %}
   </body>
-  <script src="/js/include-html.js"></script>
   <script src="/js/nav-active.js"></script>
 </html>
