@@ -1,0 +1,96 @@
+:root {
+  --title-font: "Inter", sans-serif;
+  --text-font: "Inter", sans-serif;
+  --code-font: "JetBrains Mono", monospace;
+
+  --main-bg-color: #0f0f12;
+
+  --color-surface: #18181f;
+
+  --color-text-primary: #f0eff6;
+  --color-text-secondary: #8b8aa0;
+
+  --color-primary: #7c6af7;
+  --color-primary-dark: #5b4ed4;
+
+  --color-accent: #a78bfa;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  gap: 4rem;
+}
+
+.presentation-pp {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+
+.presentation-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.presentation-title {
+  font-family: var(--title-font);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.presentation-description {
+  font-family: var(--text-font);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.presentation-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.3rem;
+}
+
+.github-link i,
+.linkedin-link i {
+  scale: 2;
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.github-link:hover i,
+.linkedin-link:hover i {
+  color: var(--color-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.cv-download {
+  background-color: var(--color-text-primary);
+  color: var(--color-surface);
+  border-radius: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.cv-download i {
+  color: var(--color-surface);
+}
+
+.cv-download:hover {
+  background-color: var(--color-primary);
+  transition: all 0.3s ease-in-out;
+}

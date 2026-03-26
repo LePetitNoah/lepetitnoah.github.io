@@ -5,6 +5,8 @@
 
   --main-bg-color: #0f0f12;
 
+  --color-surface: #18181f;
+
   --color-text-primary: #f0eff6;
   --color-text-secondary: #8b8aa0;
 
@@ -108,6 +110,7 @@ header {
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  margin-bottom: 30px;
 }
 
 .logo-container {
@@ -138,7 +141,10 @@ header {
   color: var(--color-text-primary);
   display: inline-block; /* permet un rendu fiable de transform/scale sur le lien */
   transform: translateY(0) scale(1);
-  transition: transform 0.3s ease-in, color 0.3s ease-in, text-shadow 0.3s ease-in;
+  transition:
+    transform 0.3s ease-in,
+    color 0.3s ease-in,
+    text-shadow 0.3s ease-in;
 }
 
 .navbar-item a:hover {
@@ -159,10 +165,23 @@ main {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 999;
+}
+
+.copyright-container {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin: 16px 0px;
 }
 
 /* Individual orb placements/colors */
@@ -176,7 +195,11 @@ footer {
   --dy: -55px;
   --s: 1.12;
   --glow: rgba(124, 106, 247, 0.35);
-  background: radial-gradient(circle at 25% 30%, rgba(124, 106, 247, 0.85), rgba(124, 106, 247, 0) 60%);
+  background: radial-gradient(
+    circle at 25% 30%,
+    rgba(124, 106, 247, 0.85),
+    rgba(124, 106, 247, 0) 60%
+  );
 }
 
 .orb-2 {
@@ -189,7 +212,11 @@ footer {
   --dy: -40px;
   --s: 1.1;
   --glow: rgba(167, 139, 250, 0.35);
-  background: radial-gradient(circle at 35% 25%, rgba(167, 139, 250, 0.8), rgba(167, 139, 250, 0) 60%);
+  background: radial-gradient(
+    circle at 35% 25%,
+    rgba(167, 139, 250, 0.8),
+    rgba(167, 139, 250, 0) 60%
+  );
 }
 
 .orb-3 {
@@ -202,7 +229,11 @@ footer {
   --dy: 45px;
   --s: 1.08;
   --glow: rgba(91, 78, 212, 0.35);
-  background: radial-gradient(circle at 30% 40%, rgba(91, 78, 212, 0.75), rgba(91, 78, 212, 0) 60%);
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(91, 78, 212, 0.75),
+    rgba(91, 78, 212, 0) 60%
+  );
 }
 
 .orb-4 {
@@ -215,7 +246,11 @@ footer {
   --dy: 35px;
   --s: 1.06;
   --glow: rgba(124, 106, 247, 0.3);
-  background: radial-gradient(circle at 30% 35%, rgba(124, 106, 247, 0.7), rgba(124, 106, 247, 0) 60%);
+  background: radial-gradient(
+    circle at 30% 35%,
+    rgba(124, 106, 247, 0.7),
+    rgba(124, 106, 247, 0) 60%
+  );
 }
 
 .orb-5 {
@@ -228,7 +263,11 @@ footer {
   --dy: -20px;
   --s: 1.07;
   --glow: rgba(167, 139, 250, 0.28);
-  background: radial-gradient(circle at 30% 30%, rgba(167, 139, 250, 0.65), rgba(167, 139, 250, 0) 60%);
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(167, 139, 250, 0.65),
+    rgba(167, 139, 250, 0) 60%
+  );
 }
 
 .orb-6 {
@@ -241,5 +280,9 @@ footer {
   --dy: 55px;
   --s: 1.1;
   --glow: rgba(91, 78, 212, 0.28);
-  background: radial-gradient(circle at 30% 30%, rgba(91, 78, 212, 0.7), rgba(91, 78, 212, 0) 60%);
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(91, 78, 212, 0.7),
+    rgba(91, 78, 212, 0) 60%
+  );
 }

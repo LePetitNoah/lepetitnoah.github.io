@@ -14,12 +14,43 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=JetBrains+Mono"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/about.css" />
     <title>Mon Portfolio - A Propos</title>
   </head>
 
   <body>
-    {% include orbs.html %} {% include header.html %} {% include footer.html %}
+    {% include orbs.html %} {% include header.html %}
+
+    <main>
+      <div class="presentation-container">
+        <img src="/img/pp.png" alt="logo" class="presentation-pp" />
+        <div class="presentation-main">
+          <h2 class="presentation-title">Hey, moi c'est Noah !!</h2>
+          <p class="presentation-description">
+            Étudiant passionné par le développement d'applications, je
+            transforme des idées complexes en solutions numériques élégantes.
+            Curieux de nature, j'aime explorer les nouvelles technologies et
+            relever des défis techniques.
+          </p>
+          <div class="presentation-links">
+            <a href="#" class="cv-download">
+              <i class="fas fa-download"></i> Télécharger mon CV (PDF)
+            </a>
+            <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="linkedin-link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
   </body>
   <script src="/js/nav-active.js"></script>
 </html>
