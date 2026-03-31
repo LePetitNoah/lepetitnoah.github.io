@@ -1,6 +1,11 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css?family=Inter');
 @import url('https://fonts.googleapis.com/css?family=JetBrains+Mono');
+@import url('https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css');
+
+.devicon {
+  font-size: 1.75rem;
+}
 
 :root {
   --title-font: "Inter", sans-serif;

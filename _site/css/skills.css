@@ -3,6 +3,11 @@
    Design cohérent avec le portfolio
    ============================================ */
 
+/* DevIcons sizing */
+.devicon, .skill-icon .devicon, .tool-item .devicon {
+  font-size: inherit;
+}
+
 main {
   display: flex;
   flex-direction: column;
