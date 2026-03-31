@@ -1,15 +1,14 @@
 main {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .home-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  margin: auto;
 }
 
 .title-container {

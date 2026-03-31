@@ -3,10 +3,16 @@
    Design cohérent avec le portfolio
    ============================================ */
 
+.project-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 main {
   display: flex;
   justify-content: center;
-  padding: 2rem 1rem;
 }
 
 /* ============================================
