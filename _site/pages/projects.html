@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <title>Projets | Mon Portfolio</title>
+  </head>
+
+  <body>
+    <div class="orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="orb orb-4"></span>
+  <span class="orb orb-5"></span>
+  <span class="orb orb-6"></span>
+</div>
+ <header>
+  <div class="logo-container">
+    <img src="/img/logo.png" alt="Logo du portfolio de Noah" class="logo" />
+  </div>
+
+  <button class="hamburger-btn" aria-label="Menu de navigation" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a href="/index.html">Accueil</a></li>
+      <li class="navbar-item">
+        <a href="/pages/about.html">À propos</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/skills.html">Compétences</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/projects.html">Projets</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+      <!-- ============================================
+           SECTION PROJETS SCOLAIRES
+           Modifiable : ajouter/supprimer des projets
+           dans la section "school-projects-grid"
+      ============================================ -->
+      <section class="projects-section">
+        <h1 class="section-title">
+          <i class="fas fa-graduation-cap"></i>
+          Projets Scolaires
+        </h1>
+
+        <div class="projects-grid">
+          <!-- Exemple de projet scolaire :
+               - Modifier le titre, la description
+               - Modifier l'année
+               - Modifier les tags technologiques
+               - Ajouter/retirer les liens (GitHub, site, docs)
+               - href de la carte pointe vers /pages/project-detail.html
+          -->
+          <a href="/pages/project-detail.html" class="project-card">
+            <div class="project-header">
+              <span class="project-badge en-cours">En cours</span>
+              <div class="project-header-row">
+                <h2 class="project-title">Nom du Projet</h2>
+                <span class="project-year">2024</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Brève description du projet, des objectifs et des technologies utilisées.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link" aria-label="Voir le code source">
+                <i class="fab fa-github"></i>
+              </span>
+              <span class="project-link" aria-label="Voir le site">
+                <i class="fas fa-external-link-alt"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/pages/project-detail.html" class="project-card">
+            <div class="project-header">
+              <span class="project-badge termine">Terminé</span>
+              <div class="project-header-row">
+                <h2 class="project-title">Nom du Projet</h2>
+                <span class="project-year">2023</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Brève description du projet, des objectifs et des technologies utilisées.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link" aria-label="Voir le code source">
+                <i class="fab fa-github"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION PROJETS PERSONNELS
+           Modifiable : ajouter/supprimer des projets
+           dans la section "personal-projects-grid"
+      ============================================ -->
+      <section class="projects-section">
+        <h1 class="section-title">
+          <i class="fas fa-user"></i>
+          Projets Personnels
+        </h1>
+
+        <div class="projects-grid">
+          <a href="/pages/project-detail.html" class="project-card featured">
+            <div class="project-header">
+              <span class="project-badge en-cours">En cours</span>
+              <div class="project-header-row">
+                <h2 class="project-title">Cortex</h2>
+                <span class="project-year">2024 - Present</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Description du projet personnel, ses objectifs et les technologies utilisées.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Android</span>
+              <span class="tag">AI</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link" aria-label="Voir le code source">
+                <i class="fab fa-github"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/pages/project-detail.html" class="project-card featured">
+            <div class="project-header">
+              <span class="project-badge en-cours">En cours</span>
+              <div class="project-header-row">
+                <h2 class="project-title">Hyleseum</h2>
+                <span class="project-year">2024 - Present</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Description du projet personnel, ses objectifs et les technologies utilisées.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Dart</span>
+              <span class="tag">Flutter</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link" aria-label="Voir le code source">
+                <i class="fab fa-github"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/pages/project-detail.html" class="project-card">
+            <div class="project-header">
+              <span class="project-badge termine">Terminé</span>
+              <div class="project-header-row">
+                <h2 class="project-title">Nom du Projet</h2>
+                <span class="project-year">2023</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Brève description du projet, des objectifs et des technologies utilisées.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Godot</span>
+              <span class="tag">GDScript</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link" aria-label="Voir le code source">
+                <i class="fab fa-github"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+  <div class="copyright-container">
+    <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+  </div>
+</footer>
+
+    <script src="/js/nav-active.js"></script>
+  </body>
+</html>

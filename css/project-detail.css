@@ -1,0 +1,454 @@
+/* ============================================
+   PROJECT DETAIL - Stylesheet
+   Design cohérent avec le portfolio
+   ============================================ */
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ============================================
+   CONTENEUR PRINCIPAL
+   ============================================ */
+.project-detail {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   BOUTON RETOUR
+   ============================================ */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+.back-link i {
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover i {
+  transform: translateX(-3px);
+}
+
+/* ============================================
+   EN-TÊTE DU PROJET
+   ============================================ */
+.project-header {
+  margin-bottom: 2.5rem;
+}
+
+.project-status {
+  display: flex;
+  align-items: center;
+}
+
+.project-title {
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.project-meta i {
+  color: var(--color-primary);
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+.project-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.project-badge.en-cours {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.project-badge.termine {
+  background: #22c55e;
+  color: #0f0f12;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.project-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(124, 106, 247, 0.15);
+}
+
+.project-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-subtitle i {
+  color: var(--color-accent);
+}
+
+.section-content {
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+}
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   LIENS
+   ============================================ */
+.project-links-section {
+  margin-bottom: 2.5rem;
+}
+
+.links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.detail-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 0.75rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.detail-link:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 106, 247, 0.3);
+}
+
+.detail-link i {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.detail-link:hover i {
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   DÉFIS & SOLUTIONS
+   ============================================ */
+.challenge-item,
+.solution-item {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.challenge-item {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ef4444;
+}
+
+.solution-item {
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 3px solid #22c55e;
+}
+
+.challenge-item h3,
+.solution-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.challenge-item h3 {
+  color: #ef4444;
+}
+
+.solution-item h3 {
+  color: #22c55e;
+}
+
+/* ============================================
+   TECHNOLOGIES
+   ============================================ */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.tech-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.tech-item i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.tech-item span {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   CAPTURES D'ÉCRAN
+   ============================================ */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.screenshot-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  transition: all 0.3s ease;
+}
+
+.screenshot-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   LISTE COMPÉTENCES
+   ============================================ */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+
+.skills-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   NAVIGATION ENTRE PROJETS
+   ============================================ */
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(124, 106, 247, 0.15);
+}
+
+.nav-project {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  max-width: 200px;
+}
+
+.nav-project:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.nav-project.home {
+  width: 32px;
+  height: 32px;
+  padding: 0.75rem;
+  max-width: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-project i {
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.nav-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   RESPONSIVE - Tablette
+   ============================================ */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .project-navigation {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-project {
+    flex: 1;
+    min-width: 140px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - Mobile
+   ============================================ */
+@media (max-width: 480px) {
+  main {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .project-title {
+    font-size: 1.75rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .links-container {
+    flex-direction: column;
+  }
+
+  .detail-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .tech-item i {
+    font-size: 2rem;
+  }
+
+  .project-navigation {
+    flex-direction: column;
+  }
+
+  .nav-project {
+    width: 100%;
+    max-width: none;
+  }
+
+  .nav-project.home {
+    order: -1;
+  }
+}

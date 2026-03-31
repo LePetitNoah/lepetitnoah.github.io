@@ -9,7 +9,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 150px;
+  margin: auto;
 }
 
 .title-container {
@@ -22,7 +22,7 @@ main {
 .tagline {
   font-family: var(--text-font);
   font-size: 1.25rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   margin-bottom: 0.75rem;
   letter-spacing: 0.02em;
 }

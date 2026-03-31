@@ -1,0 +1,165 @@
+---
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/project-detail.css" />
+    <title>Nom du Projet | Mon Portfolio</title>
+  </head>
+
+  <body>
+    {% include orbs.html %} {% include header.html %}
+
+    <main>
+      <article class="project-detail">
+        <a href="/pages/projects.html" class="back-link">
+          <i class="fas fa-arrow-left"></i>
+          Retour aux projets
+        </a>
+
+        <header class="project-header">
+          <h1 class="project-title">Nom du Projet</h1>
+          <div class="project-meta">
+            <span class="project-year">
+              <i class="fas fa-calendar"></i>
+              2024 - Present
+            </span>
+            <div class="project-status">
+              <span class="project-badge en-cours">En cours</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="project-links-section">
+          <h2 class="section-subtitle">
+            <i class="fas fa-link"></i>
+            Liens
+          </h2>
+          <div class="links-container">
+            <a href="#" class="detail-link">
+              <i class="fab fa-github"></i>
+              <span>Code source</span>
+            </a>
+            <a href="#" class="detail-link">
+              <i class="fas fa-globe"></i>
+              <span>Site web</span>
+            </a>
+            <a href="#" class="detail-link">
+              <i class="fas fa-file-alt"></i>
+              <span>Documentation</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2 class="section-subtitle">
+            <i class="fas fa-info-circle"></i>
+            Description
+          </h2>
+          <div class="section-content">
+            <p>
+              Description détaillée du projet. Expliquez le contexte, les
+              objectifs et ce que vous avez accompli.
+            </p>
+            <p>
+              Paragraphe supplémentaire pour approfondir certains aspects du
+              projet.
+            </p>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2 class="section-subtitle">
+            <i class="fas fa-lightbulb"></i>
+            Défis & Solutions
+          </h2>
+          <div class="section-content">
+            <div class="challenge-item">
+              <h3>Défi</h3>
+              <p>Description du défi rencontré.</p>
+            </div>
+            <div class="solution-item">
+              <h3>Solution trouvée</h3>
+              <p>Comment vous avez résolu le problème.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2 class="section-subtitle">
+            <i class="fas fa-code"></i>
+            Technologies utilisées
+          </h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <i class="devicon-kotlin-original"></i>
+              <span>Kotlin</span>
+            </div>
+            <div class="tech-item">
+              <i class="devicon-androidstudio-plain"></i>
+              <span>Android Studio</span>
+            </div>
+            <div class="tech-item">
+              <i class="devicon-firebase-plain"></i>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2 class="section-subtitle">
+            <i class="fas fa-images"></i>
+            Aperçu
+          </h2>
+          <div class="screenshots-grid">
+            <div class="screenshot-item">
+              <img src="/img/project-placeholder.png" alt="Capture d'écran 1" />
+            </div>
+            <div class="screenshot-item">
+              <img src="/img/project-placeholder.png" alt="Capture d'écran 2" />
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2 class="section-subtitle">
+            <i class="fas fa-star"></i>
+            Compétences acquises
+          </h2>
+          <ul class="skills-list">
+            <li>Développement d'applications mobiles</li>
+            <li>Intégration d'APIs d'intelligence artificielle</li>
+            <li>Travail en autonomie sur un projet long terme</li>
+          </ul>
+        </section>
+
+        <nav class="project-navigation">
+          <a href="#" class="nav-project prev">
+            <i class="fas fa-chevron-left"></i>
+            <div class="nav-info">
+              <span class="nav-label">Projet précédent</span>
+              <span class="nav-title">Nom du projet</span>
+            </div>
+          </a>
+          <a href="/pages/projects.html" class="nav-project home">
+            <i class="fas fa-th-large"></i>
+          </a>
+          <a href="#" class="nav-project next">
+            <div class="nav-info">
+              <span class="nav-label">Projet suivant</span>
+              <span class="nav-title">Nom du projet</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </nav>
+      </article>
+    </main>
+
+    {% include footer.html %}
+    <script src="/js/nav-active.js"></script>
+  </body>
+</html>
