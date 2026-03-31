@@ -15,29 +15,26 @@ main {
   font-family: var(--code-font);
   font-size: 5rem;
   font-weight: 700;
-  animation: changeCouleur 8s ease-in infinite;
+  color: var(--color-primary);
+  text-shadow: 
+    0 0 10px rgba(124, 106, 247, 0.5),
+    0 0 20px rgba(124, 106, 247, 0.3),
+    0 0 30px rgba(124, 106, 247, 0.2);
+  animation: glowPulse 4s ease-in-out infinite;
 }
 
-@keyframes changeCouleur {
-  0% {
-    color: var(--color-primary-dark);
-    text-shadow: var(--color-primary-dark) 1px 1px 1px;
-  }
-  25% {
-    color: var(--color-primary);
-    text-shadow: var(--color-primary) 1px 1px 1px;
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(124, 106, 247, 0.5),
+      0 0 20px rgba(124, 106, 247, 0.3),
+      0 0 30px rgba(124, 106, 247, 0.2);
   }
   50% {
-    color: var(--color-primary-dark);
-    text-shadow: var(--color-primary-dark) 1px 1px 1px;
-  }
-  75% {
-    color: var(--color-primary);
-    text-shadow: var(--color-primary) 1px 1px 1px;
-  }
-  100% {
-    color: var(--color-primary-dark);
-    text-shadow: var(--color-primary-dark) 1px 1px 1px;
+    text-shadow: 
+      0 0 15px rgba(124, 106, 247, 0.6),
+      0 0 30px rgba(124, 106, 247, 0.4),
+      0 0 45px rgba(124, 106, 247, 0.3);
   }
 }
 

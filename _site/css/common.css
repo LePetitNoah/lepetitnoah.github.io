@@ -12,7 +12,7 @@
   --color-surface: #18181f;
 
   --color-text-primary: #f0eff6;
-  --color-text-secondary: #8b8aa0;
+  --color-text-secondary: #a09aad;
 
   --color-primary: #7c6af7;
   --color-primary-dark: #5b4ed4;
@@ -180,15 +180,15 @@ header {
 }
 
 .navbar-item a.nav-disabled {
-  opacity: 0.5;
-  color: var(--color-text-secondary);
+  opacity: 0.4;
+  color: #6a6880;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .navbar-item a.nav-disabled:hover {
   transform: translateY(0) scale(1);
-  color: var(--color-text-secondary);
+  color: #6a6880;
   text-shadow: none;
 }
 
