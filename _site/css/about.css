@@ -1,419 +1,481 @@
+/* ============================================
+   ABOUT - Stylesheet
+   Design cohérent avec le portfolio
+   ============================================ */
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
-}
-
-.presentation-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 80%;
-  margin-top: 40px;
+  padding: 2rem;
   gap: 4rem;
 }
 
-.presentation-pp {
-  width: 256px;
-  height: 256px;
-  border-radius: 50%;
+/* ============================================
+   SECTIONS
+   ============================================ */
+.about-section {
+  width: 100%;
+  max-width: 1000px;
 }
 
-.presentation-main {
+.about-section.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* ============================================
+   TITRES DE SECTIONS
+   ============================================ */
+.section-title {
+  font-family: var(--title-font);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 0.75rem;
+}
+
+.section-title i {
+  color: var(--color-accent);
+}
+
+/* ============================================
+   CARTE PRÉSENTATION
+   ============================================ */
+.presentation-card {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.presentation-image {
+  flex-shrink: 0;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 0 30px rgba(124, 106, 247, 0.2);
+}
+
+.presentation-content {
+  flex: 1;
 }
 
 .presentation-title {
   font-family: var(--title-font);
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
-.presentation-description {
-  font-family: var(--text-font);
-  font-size: 1.25rem;
-  font-weight: 400;
+.presentation-text {
+  font-size: 1.1rem;
   color: var(--color-text-primary);
-  max-width: 700px;
-  margin-bottom: 20px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
 .presentation-links {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 2.3rem;
+  gap: 1rem;
 }
 
-.github-link i,
-.linkedin-link i {
-  scale: 2;
+/* ============================================
+   BOUTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
   color: var(--color-text-primary);
-}
-
-.github-link:hover i,
-.linkedin-link:hover i {
-  color: var(--color-primary);
-  transition: all 0.3s ease-in-out;
-}
-
-.cv-download {
-  background-color: var(--color-text-primary);
-  color: var(--color-surface);
   border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
 }
 
-.cv-download i {
-  color: var(--color-surface);
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(124, 106, 247, 0.4);
 }
 
-.cv-download:hover {
-  background-color: var(--color-primary);
-  transform: scale(1.02);
-  box-shadow: 0 0 15px rgba(124, 106, 247, 0.4);
-}
-
-.parcours-container {
-  padding: 2rem;
-  width: 50%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.parcours-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+.social-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-}
-
-.parcours-title h2 {
-  color: var(--color-primary);
-}
-
-.parcours-title i {
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(124, 106, 247, 0.1);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 0.75rem;
   color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.parcours-items {
+.social-link:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.social-link i {
+  font-size: 1.25rem;
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  padding-left: 2rem;
 }
 
-.parcours-items::before {
+.timeline::before {
   content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 11px;
+  top: 0;
+  bottom: 0;
   width: 2px;
-  height: 100%;
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(124, 106, 247, 0.5) 20%,
-    rgba(124, 106, 247, 0.5) 80%,
+    var(--color-primary) 10%,
+    var(--color-primary) 90%,
     transparent
   );
 }
 
-.parcours-item {
+.timeline-item {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  padding-bottom: 2rem;
 }
 
-.parcours-item:nth-child(odd) .item-card{
-  align-items: flex-start;
+.timeline-item:last-child {
+  padding-bottom: 0;
 }
 
-@media (min-width: 768px) {
-  .parcours-item {
-    justify-content: flex-start;
-  }
-
-  .parcours-item:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-
-  .parcours-item:nth-child(even) {
-    flex-direction: row;
-  }
-}
-
-.item-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  width: 26px;
+  height: 26px;
   background: var(--color-surface);
-  border: 2px solid var(--color-text-primary);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-
-  position: relative;
-  z-index: 10;
-  flex-shrink: 0;
+  z-index: 1;
 }
 
-.parcours-item:last-child .item-circle {
-  border-color: var(--color-accent);
+.timeline-marker i {
+  font-size: 0.7rem;
+  color: var(--color-primary);
 }
 
-.parcours-item:last-child i {
+.timeline-item.featured .timeline-marker {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.timeline-item.featured .timeline-marker i {
+  color: var(--color-text-primary);
+}
+
+.timeline-content {
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(124, 106, 247, 0.15);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(124, 106, 247, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-place {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   CARTES INFO (Objectifs / Intérêts)
+   ============================================ */
+.info-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(124, 106, 247, 0.15);
+}
+
+.info-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-card-title i {
   color: var(--color-accent);
 }
 
-@media (min-width: 768px) {
-  .parcours-item:nth-child(odd) .item-circle {
-    transform: translateX(-50%);
-  }
-
-  .parcours-item:nth-child(even) .item-circle {
-    transform: translateX(50%);
-  }
+/* ============================================
+   LISTE OBJECTIFS
+   ============================================ */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.item-card {
+.info-list li {
   display: flex;
-  flex-direction: column;
-  width: calc(100% - 5rem);
-  padding: 1rem;
-  background: var(--color-surface);
-  border: 1px solid rgba(124, 106, 247, 0.3);
-  border-radius: 0.75rem;
-  box-shadow: 0 0 15px rgba(124, 106, 247, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.item-card:hover {
-  box-shadow: 0 0 20px rgba(124, 106, 247, 0.25);
-  transform: translateY(-2px);
-}
-
-@media (min-width: 768px) {
-  .item-card {
-    width: 40%;
-  }
-}
-
-.item-datetime {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-primary-dark);
-}
-
-.item-title {
-  font-weight: bold;
-  margin-top: 0.25rem;
-  color: var(--color-primary);
-}
-
-.item-place {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  margin-top: 0.5rem;
-}
-
-.item-description {
-  font-size: 0.875rem;
-  color: var(--color-text-primary);
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 767px) {
-  .parcours-items::before {
-    left: 20px;
-  }
-
-  .parcours-item {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .item-circle {
-    transform: none;
-  }
-
-  .item-card {
-    width: calc(100% - 60px);
-  }
-}
-
-.obj-int-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 70%;
-  gap: 1rem;
-  margin-bottom: 40px;
-}
-
-.objectives-container,
-.interests-container {
-  background-color: var(--color-surface);
-  display: flex;
-  flex-direction: column;
-  padding: 1.2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  width: 40%;
-}
-
-.objectives-title,
-.interests-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+  align-items: flex-start;
   gap: 0.75rem;
-}
-
-.objectives-list{
-  list-style-type: symbols(cyclic ">");
-  padding-left: 1.5rem;
-}
-
-.objectives-list li {
+  padding: 0.75rem 0;
   color: var(--color-text-primary);
-  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(124, 106, 247, 0.1);
 }
 
-.interests-items {
+.info-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-list li::before {
+  content: "→";
+  color: var(--color-primary);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   GRILLE INTÉRÊTS
+   ============================================ */
+.interests-grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.interest-item{
-  background-color: var(--color-primary);
-  color: var(--color-surface);
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(124, 106, 247, 0.15);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
   padding: 0.5rem 1rem;
-  margin: 0.35rem;
-  border-radius: 0.5rem;
-  font-size: 1rem; 
+  border-radius: 2rem;
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  transition: all 0.3s ease;
 }
 
-.interest-item:hover {
-  background-color: var(--color-primary-dark);
-  scale: 1.05;
-  transition: all 0.3s ease-in-out;
+.interest-tag:hover {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  transform: scale(1.05);
 }
 
-/* Mobile responsive media queries */
+.interest-tag i {
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE - Tablette
+   ============================================ */
 @media (max-width: 768px) {
   main {
-    gap: 50px;
+    padding: 1.5rem;
+    gap: 3rem;
   }
 
-  .presentation-container {
+  .about-section.two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-card {
     flex-direction: column;
-    width: 90%;
-    gap: 2rem;
-    margin-top: 20px;
-  }
-
-  .presentation-pp {
-    width: 200px;
-    height: 200px;
-  }
-
-  .presentation-main {
-    align-items: center;
     text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
   }
 
   .presentation-title {
     font-size: 1.5rem;
   }
 
-  .presentation-description {
+  .presentation-text {
     font-size: 1rem;
-    max-width: 100%;
   }
 
   .presentation-links {
-    flex-direction: column;
-    gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .parcours-container {
-    width: 90%;
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 7px;
+  }
+
+  .timeline-marker {
+    left: -1.5rem;
+    width: 22px;
+    height: 22px;
+  }
+
+  .timeline-marker i {
+    font-size: 0.6rem;
+  }
+
+  .timeline-content {
+    margin-left: 0.25rem;
     padding: 1rem;
   }
 
-  .parcours-title {
-    font-size: 1.25rem;
-  }
-
-  .obj-int-container {
-    flex-direction: column;
-    width: 90%;
-    gap: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .objectives-container,
-  .interests-container {
-    width: 100%;
-  }
-
-  .objectives-title,
-  .interests-title {
-    font-size: 1.25rem;
+  .timeline-title {
+    font-size: 1rem;
   }
 }
 
+/* ============================================
+   RESPONSIVE - Mobile
+   ============================================ */
 @media (max-width: 480px) {
   main {
-    gap: 30px;
+    padding: 1rem;
+    gap: 2rem;
   }
 
-  .presentation-container {
-    width: 95%;
+  .presentation-card {
+    padding: 1.5rem;
   }
 
-  .presentation-pp {
-    width: 150px;
-    height: 150px;
+  .profile-pic {
+    width: 120px;
+    height: 120px;
   }
 
   .presentation-title {
     font-size: 1.25rem;
   }
 
-  .presentation-description {
+  .presentation-text {
     font-size: 0.9rem;
   }
 
-  .parcours-container {
-    width: 95%;
-    padding: 0.75rem;
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 
-  .obj-int-container {
-    width: 95%;
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link i {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.25rem;
+  }
+
+  .info-card-title {
+    font-size: 1.1rem;
+  }
+
+  .info-list li {
+    font-size: 0.9rem;
+  }
+
+  .interest-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 }

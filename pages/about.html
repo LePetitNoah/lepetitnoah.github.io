@@ -1,148 +1,163 @@
 ---
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/about.css" />
-    <title>Mon Portfolio - A Propos</title>
+    <title>A Propos | Mon Portfolio</title>
   </head>
 
   <body>
     {% include orbs.html %} {% include header.html %}
 
     <main>
-      <div class="presentation-container">
-        <img
-          src="/img/pp.png"
-          alt="Photo de profil de Noah"
-          class="presentation-pp"
-        />
-        <div class="presentation-main">
-          <h2 class="presentation-title">Hey, moi c'est Noah !!</h2>
-          <p class="presentation-description">
-            Étudiant passionné par le développement d'applications, je
-            transforme des idées complexes en solutions numériques élégantes.
-            Curieux de nature, j'aime explorer les nouvelles technologies et
-            relever des défis techniques.
-          </p>
-          <div class="presentation-links">
-            <a href="#" class="cv-download">
-              <i class="fas fa-download"></i> Télécharger mon CV (PDF)
-            </a>
-            <a href="#" class="github-link"><i class="fab fa-github"></i></a>
-            <a href="#" class="linkedin-link"
-              ><i class="fab fa-linkedin"></i
-            ></a>
+      <!-- ============================================
+           SECTION PRÉSENTATION
+      ============================================ -->
+      <section class="about-section">
+        <div class="presentation-card">
+          <div class="presentation-image">
+            <img
+              src="/img/pp.png"
+              alt="Photo de profil de Noah"
+              class="profile-pic"
+            />
           </div>
-        </div>
-      </div>
-      <div class="parcours-container">
-        <div class="parcours-title">
-          <h2><i class="fas fa-graduation-cap"></i> Mon Parcours</h2>
-        </div>
-        <div class="parcours-items">
-          <div class="parcours-item">
-            <div class="item-card">
-              <time class="item-datetime">2020 - 2023</time>
-              <p class="item-title">Baccalauréat Général</p>
-              <p class="item-place">Lycée Lalande, Bourg-en-Bresse</p>
-              <p class="item-description">Spécialité Mathématique et NSI</p>
-            </div>
-            <div class="item-circle">
-              <i class="fas fa-code"></i>
-            </div>
-          </div>
-
-          <div class="parcours-item">
-            <div class="item-card">
-              <time class="item-datetime">2023 - 2024</time>
-              <p class="item-title">BUT Informatique 1A</p>
-              <p class="item-place">IUT Lyon 1 , Bourg-en-Bresse</p>
-              <p class="item-description">
-                Parcours développement d'applications
-              </p>
-            </div>
-            <div class="item-circle">
-              <i class="fas fa-code"></i>
-            </div>
-          </div>
-
-          <div class="parcours-item">
-            <div class="item-card">
-              <time class="item-datetime">2024 - 2025</time>
-              <p class="item-title">BUT Informatique 2A</p>
-              <p class="item-place">IUT Lyon 1, Bourg-en-Bresse</p>
-              <p class="item-description">
-                Avec un stage de 2 mois et demi en Malaisie
-              </p>
-            </div>
-            <div class="item-circle">
-              <i class="fas fa-code"></i>
-            </div>
-          </div>
-
-          <div class="parcours-item">
-            <div class="item-card">
-              <time class="item-datetime">2025 - Maintenant</time>
-              <p class="item-title">BUT Informatique 3A</p>
-              <p class="item-place">IUT Lyon 1, Bourg-en-Bresse</p>
-              <p class="item-description">
-                Année en alternance à Info Adapt Service
-              </p>
-            </div>
-            <div class="item-circle">
-              <i class="fas fa-code"></i>
+          <div class="presentation-content">
+            <h1 class="presentation-title">Hey, moi c'est Noah !!</h1>
+            <p class="presentation-text">
+              Étudiant passionné par le développement d'applications, je transforme des
+              idées complexes en solutions numériques élégantes. Curieux de nature,
+              j'aime explorer les nouvelles technologies et relever des défis techniques.
+            </p>
+            <div class="presentation-links">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Télécharger mon CV
+              </a>
+              <a href="#" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="obj-int-container">
-        <div class="objectives-container">
-          <h2 class="objectives-title">
-            <i class="fas fa-bullseye"></i> Mes Objectifs
+      <!-- ============================================
+           SECTION PARCOURS
+      ============================================ -->
+      <section class="about-section">
+        <h2 class="section-title">
+          <i class="fas fa-graduation-cap"></i>
+          Mon Parcours
+        </h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020 - 2023</span>
+              <h3 class="timeline-title">Baccalauréat Général</h3>
+              <p class="timeline-place">Lycée Lalande, Bourg-en-Bresse</p>
+              <p class="timeline-desc">Spécialité Mathématique et NSI</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 - 2024</span>
+              <h3 class="timeline-title">BUT Informatique 1A</h3>
+              <p class="timeline-place">IUT Lyon 1, Bourg-en-Bresse</p>
+              <p class="timeline-desc">Parcours développement d'applications</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-plane"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - 2025</span>
+              <h3 class="timeline-title">BUT Informatique 2A</h3>
+              <p class="timeline-place">IUT Lyon 1, Bourg-en-Bresse</p>
+              <p class="timeline-desc">Avec un stage de 2 mois et demi en Malaisie</p>
+            </div>
+          </div>
+
+          <div class="timeline-item featured">
+            <div class="timeline-marker">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 - Present</span>
+              <h3 class="timeline-title">BUT Informatique 3A</h3>
+              <p class="timeline-place">IUT Lyon 1, Bourg-en-Bresse</p>
+              <p class="timeline-desc">Année en alternance à Info Adapt Service</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION OBJECTIFS ET INTÉRÊTS
+      ============================================ -->
+      <section class="about-section two-columns">
+        <div class="info-card">
+          <h2 class="info-card-title">
+            <i class="fas fa-bullseye"></i>
+            Mes Objectifs
           </h2>
-          <ul class="objectives-list">
-            <li>
-              Devenir un développeur d'applications compétent et polyvalent.
-            </li>
-            <li>
-              Continuer à apprendre et à maîtriser de nouvelles technologies.
-            </li>
+          <ul class="info-list">
+            <li>Devenir un développeur d'applications compétent et polyvalent.</li>
+            <li>Continuer à apprendre et à maîtriser de nouvelles technologies.</li>
             <li>Travailler sur mes projets personnels Cortex et Hyleseum.</li>
           </ul>
         </div>
 
-        <div class="interests-container">
-          <h2 class="interests-title">
-            <i class="fas fa-heart"></i> Mes centres d'intérêts
+        <div class="info-card">
+          <h2 class="info-card-title">
+            <i class="fas fa-heart"></i>
+            Mes centres d'intérêts
           </h2>
-          <div class="interests-items">
-            <span class="interest-item">
-              <i class="fas fa-running"></i> Sports
+          <div class="interests-grid">
+            <span class="interest-tag">
+              <i class="fas fa-running"></i>
+              Sports
             </span>
-            <span class="interest-item">
-              <i class="fas fa-desktop"></i> Informatique
+            <span class="interest-tag">
+              <i class="fas fa-desktop"></i>
+              Informatique
             </span>
-            <span class="interest-item">
-              <i class="fas fa-cat"></i> Animaux
+            <span class="interest-tag">
+              <i class="fas fa-cat"></i>
+              Animaux
             </span>
-            <span class="interest-item">
-              <i class="fas fa-gamepad"></i> Jeu vidéo
+            <span class="interest-tag">
+              <i class="fas fa-gamepad"></i>
+              Jeu vidéo
             </span>
-            <span class="interest-item">
-              <i class="fas fa-music"></i> Musique
+            <span class="interest-tag">
+              <i class="fas fa-music"></i>
+              Musique
             </span>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     {% include footer.html %}
+    <script src="/js/nav-active.js"></script>
   </body>
-  <script src="/js/nav-active.js"></script>
 </html>

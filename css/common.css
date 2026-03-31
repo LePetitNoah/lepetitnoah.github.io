@@ -53,14 +53,11 @@ body {
   background-color: var(--main-bg-color);
   position: relative;
   cursor:default;
+  padding-top: 100px;
 }
 
 body a{
   cursor: pointer;
-}
-
-main {
-  flex: 1;
 }
 
 /* Background animated orbs (option 2) */
@@ -130,34 +127,28 @@ main {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 1.875rem;
-}
-
-.logo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
-  margin: 0 var(--spacing-md);
-}
-
-.logo {
-  width: 128px;
-  height: 128px;
+  justify-content: center;
+  padding: 1.5rem 1.5rem;
+  background: rgba(15, 15, 18, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(124, 106, 247, 0.2);
 }
 
 .navbar-list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   list-style: none;
-  margin: 50px 15px 0px 0px;
+  gap: 2.5rem;
 }
 
 .navbar-item {
-  margin: 0px 15px;
   font-size: 1.2rem;
 }
 
@@ -200,12 +191,14 @@ header {
 /* Hamburger menu */
 .hamburger-btn {
   display: none;
+  position: absolute;
+  left: 1rem;
   background: none;
   border: none;
   color: var(--color-text-primary);
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.5rem;
   transition: all 0.3s ease;
 }
 
@@ -295,6 +288,7 @@ a:focus-visible {
 main {
   position: relative;
   z-index: 1;
+  flex: 1;
 }
 
 footer {
