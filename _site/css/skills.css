@@ -1,0 +1,284 @@
+/* ============================================
+   COMPÉTENCES - Stylesheet
+   Design cohérent avec le portfolio
+   ============================================ */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 80px;
+}
+
+/* ============================================
+   TITRES DE SECTIONS
+   ============================================ */
+.section-title {
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.section-title i {
+  color: var(--color-accent);
+}
+
+/* ============================================
+   SECTION COMPÉTENCES TECHNIQUES
+   ============================================ */
+.skills-section {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Carte de compétence technique */
+.skill-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 0 20px rgba(124, 106, 247, 0.2);
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 106, 247, 0.15);
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+}
+
+.skill-icon i {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+.skill-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(124, 106, 247, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary));
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+.skill-percent {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   SECTION COMPÉTENCES HUMAINES
+   ============================================ */
+.soft-skills-section {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.soft-skill-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.soft-skill-card:hover {
+  box-shadow: 0 0 20px rgba(124, 106, 247, 0.2);
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+
+.soft-skill-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 106, 247, 0.15);
+  border-radius: 50%;
+}
+
+.soft-skill-icon i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.soft-skill-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.soft-skill-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ============================================
+   SECTION OUTILS & TECHNOLOGIES
+   ============================================ */
+.tools-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+  box-shadow: 0 0 15px rgba(124, 106, 247, 0.2);
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.tool-item i {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.tool-item span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   RESPONSIVE - Tablette
+   ============================================ */
+@media (max-width: 768px) {
+  main {
+    gap: 50px;
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-item {
+    padding: 0.75rem 1rem;
+  }
+
+  .tool-item i {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - Mobile
+   ============================================ */
+@media (max-width: 480px) {
+  main {
+    gap: 40px;
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-icon i {
+    font-size: 1.25rem;
+  }
+
+  .soft-skill-card {
+    padding: 1rem;
+  }
+
+  .tool-item {
+    padding: 0.5rem 0.75rem;
+  }
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AGENTS.md | lepetitnoah.github.io</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="AGENTS.md" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/AGENTS.html" />
+<meta property="og:url" content="http://localhost:4000/AGENTS.html" />
+<meta property="og:site_name" content="lepetitnoah.github.io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AGENTS.md" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"AGENTS.md","url":"http://localhost:4000/AGENTS.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=581e026eca2ed78fca837e20db96e1da0b10ed2b">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">lepetitnoah.github.io</a></h1>
+      
+
+      <h1 id="agentsmd">AGENTS.md</h1>
+
+<h2 id="project-overview">Project Overview</h2>
+
+<p>This is a personal portfolio website built with Jekyll and GitHub Pages. The site features a dark theme with animated orbs, responsive design, and French content.</p>
+
+<h2 id="build-commands">Build Commands</h2>
+
+<h3 id="local-development">Local Development</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install Ruby dependencies</span>
+bundle <span class="nb">install</span>
+
+<span class="c"># Start local server with live reload</span>
+bundle <span class="nb">exec </span>jekyll serve <span class="nt">--livereload</span> <span class="nt">--trace</span>
+
+<span class="c"># Build for production</span>
+bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># Serve production build locally</span>
+bundle <span class="nb">exec </span>jekyll serve <span class="nt">--detach</span>
+</code></pre></div></div>
+
+<h3 id="github-pages">GitHub Pages</h3>
+<ul>
+  <li>The site auto-builds on push to the <code class="language-plaintext highlighter-rouge">main</code> branch via GitHub Actions</li>
+  <li>No manual build commands needed for deployment</li>
+</ul>
+
+<h3 id="jekyll-commands">Jekyll Commands</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Clean build artifacts</span>
+bundle <span class="nb">exec </span>jekyll clean
+
+<span class="c"># Check for configuration issues</span>
+bundle <span class="nb">exec </span>jekyll doctor
+
+<span class="c"># Import content from other platforms</span>
+bundle <span class="nb">exec </span>jekyll import
+</code></pre></div></div>
+
+<h2 id="code-style-guidelines">Code Style Guidelines</h2>
+
+<h3 id="html">HTML</h3>
+
+<h4 id="structure">Structure</h4>
+<ul>
+  <li>Use HTML5 semantic elements (<code class="language-plaintext highlighter-rouge">&lt;header&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;footer&gt;</code>)</li>
+  <li>Always include <code class="language-plaintext highlighter-rouge">lang="fr"</code> on the <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> element (French site)</li>
+  <li>Include proper meta tags in <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>:
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Include accessibility attributes: <code class="language-plaintext highlighter-rouge">aria-label</code>, <code class="language-plaintext highlighter-rouge">aria-expanded</code>, <code class="language-plaintext highlighter-rouge">aria-hidden</code>, etc.</li>
+</ul>
+
+<h4 id="formatting">Formatting</h4>
+<ul>
+  <li>Use 2-space indentation</li>
+  <li>Place <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags before closing <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code> (unless defer/async)</li>
+  <li>Separate includes with single space: `&lt;header&gt;
+    <div class="logo-container">
+  <img src="/img/logo.png" alt="Logo du portfolio de Noah" class="logo" />
+</div>
+
+    <p><button class="hamburger-btn" aria-label="Menu de navigation" aria-expanded="false">
+  <i class="fas fa-bars"></i>
+</button></p>
+
+    <nav class="navbar">
+  <ul class="navbar-list">
+    <li class="navbar-item"><a href="/index.html">Accueil</a></li>
+    <li class="navbar-item">
+      <a href="/pages/about.html">À propos</a>
+    </li>
+    <li class="navbar-item">
+      <a href="/pages/skills.html">Compétences</a>
+    </li>
+    <li class="navbar-item">
+      <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1">Projets</a>
+    </li>
+    <li class="navbar-item">
+      <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1">Contact</a>
+    </li>
+  </ul>
+</nav>
+  </li>
+</ul>
+<p>&lt;/header&gt;</p>
+<footer>
+  <div class="copyright-container">
+    <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+  </div>
+</footer>
+<p>`</p>
+
+<h4 id="jekyll-templates">Jekyll Templates</h4>
+<ul>
+  <li>Front matter required at top of every page: <code class="language-plaintext highlighter-rouge">---</code></li>
+  <li>Use includes from <code class="language-plaintext highlighter-rouge">_includes/</code> directory</li>
+  <li>CSS/JS paths should be absolute: <code class="language-plaintext highlighter-rouge">/css/common.css</code>, <code class="language-plaintext highlighter-rouge">/js/nav-active.js</code></li>
+</ul>
+
+<h3 id="css">CSS</h3>
+
+<h4 id="variables-defined-in-commoncss">Variables (defined in <code class="language-plaintext highlighter-rouge">common.css</code>)</h4>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--title-font</span><span class="p">:</span> <span class="s1">"Inter"</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="py">--text-font</span><span class="p">:</span> <span class="s1">"Inter"</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="py">--code-font</span><span class="p">:</span> <span class="s1">"JetBrains Mono"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
+  
+  <span class="py">--main-bg-color</span><span class="p">:</span> <span class="m">#0f0f12</span><span class="p">;</span>
+  <span class="py">--color-surface</span><span class="p">:</span> <span class="m">#18181f</span><span class="p">;</span>
+  <span class="py">--color-text-primary</span><span class="p">:</span> <span class="m">#f0eff6</span><span class="p">;</span>
+  <span class="py">--color-text-secondary</span><span class="p">:</span> <span class="m">#a09aad</span><span class="p">;</span>
+  <span class="py">--color-primary</span><span class="p">:</span> <span class="m">#7c6af7</span><span class="p">;</span>
+  <span class="py">--color-primary-dark</span><span class="p">:</span> <span class="m">#5b4ed4</span><span class="p">;</span>
+  <span class="py">--color-accent</span><span class="p">:</span> <span class="m">#a78bfa</span><span class="p">;</span>
+  
+  <span class="py">--spacing-xs</span><span class="p">:</span> <span class="m">0.25rem</span><span class="p">;</span>
+  <span class="py">--spacing-sm</span><span class="p">:</span> <span class="m">0.5rem</span><span class="p">;</span>
+  <span class="py">--spacing-md</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+  <span class="py">--spacing-lg</span><span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+  <span class="py">--spacing-xl</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="naming-conventions">Naming Conventions</h4>
+<ul>
+  <li>Use lowercase with hyphens: <code class="language-plaintext highlighter-rouge">.navbar-list</code>, <code class="language-plaintext highlighter-rouge">.skill-card</code></li>
+  <li>BEM-lite: <code class="language-plaintext highlighter-rouge">.block</code>, <code class="language-plaintext highlighter-rouge">.block-element</code>, <code class="language-plaintext highlighter-rouge">.block--modifier</code></li>
+  <li>State classes: <code class="language-plaintext highlighter-rouge">.nav-active</code>, <code class="language-plaintext highlighter-rouge">.nav-disabled</code>, <code class="language-plaintext highlighter-rouge">.navbar-open</code></li>
+</ul>
+
+<h4 id="formatting-1">Formatting</h4>
+<ul>
+  <li>2-space indentation</li>
+  <li>One selector per line for multi-line selectors</li>
+  <li>Place media queries at end of file or grouped at bottom</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">rem</code> for spacing, <code class="language-plaintext highlighter-rouge">px</code> only for fine-grained values</li>
+  <li>Use CSS custom properties for colors, fonts, and spacing</li>
+  <li>Always include <code class="language-plaintext highlighter-rouge">prefers-reduced-motion</code> media query to disable animations</li>
+</ul>
+
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">flex</code> and <code class="language-plaintext highlighter-rouge">grid</code> for layouts over floats</li>
+  <li>Include <code class="language-plaintext highlighter-rouge">box-shadow</code> and <code class="language-plaintext highlighter-rouge">transform</code> transitions for interactive elements</li>
+  <li>Group related styles together</li>
+  <li>Comment section headers with <code class="language-plaintext highlighter-rouge">/* ============================================ */</code> format</li>
+  <li>Include hover states for all interactive elements</li>
+</ul>
+
+<h3 id="javascript">JavaScript</h3>
+
+<h4 id="structure-1">Structure</h4>
+<ul>
+  <li>Wrap all code in IIFE: <code class="language-plaintext highlighter-rouge">(function() { ... })();</code></li>
+  <li>Use strict mode where appropriate</li>
+  <li>DOM-ready check:
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">loading</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="nx">init</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">init</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="naming-conventions-1">Naming Conventions</h4>
+<ul>
+  <li>Constants: <code class="language-plaintext highlighter-rouge">UPPER_SNAKE_CASE</code></li>
+  <li>Functions/variables: <code class="language-plaintext highlighter-rouge">camelCase</code></li>
+  <li>Private functions can use leading underscore: <code class="language-plaintext highlighter-rouge">_helperFunction()</code></li>
+</ul>
+
+<h4 id="formatting-2">Formatting</h4>
+<ul>
+  <li>2-space indentation</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">const</code> and <code class="language-plaintext highlighter-rouge">let</code> - avoid <code class="language-plaintext highlighter-rouge">var</code></li>
+  <li>Always use strict equality: <code class="language-plaintext highlighter-rouge">===</code> and <code class="language-plaintext highlighter-rouge">!==</code></li>
+  <li>Use template literals for string interpolation</li>
+  <li>Trailing commas in multi-line objects/arrays</li>
+</ul>
+
+<h4 id="best-practices-1">Best Practices</h4>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">querySelector</code> with specific selectors, not <code class="language-plaintext highlighter-rouge">querySelectorAll</code> for single elements</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">addEventListener</code> over inline event handlers</li>
+  <li>Handle errors gracefully with try/catch for URL parsing</li>
+  <li>Include keyboard support (Escape key for menus)</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">IntersectionObserver</code> for scroll-based animations</li>
+  <li>Respect <code class="language-plaintext highlighter-rouge">prefers-reduced-motion</code> in JavaScript animations</li>
+</ul>
+
+<h3 id="accessibility">Accessibility</h3>
+
+<ul>
+  <li>Include <code class="language-plaintext highlighter-rouge">aria-label</code> on icon-only buttons</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">aria-expanded</code> for collapsible menus</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">aria-disabled="true" tabindex="-1"</code> for disabled nav items</li>
+  <li>Include focus indicators (<code class="language-plaintext highlighter-rouge">focus-visible</code>) for keyboard navigation</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> for decorative elements (orbs)</li>
+</ul>
+
+<h3 id="file-organization">File Organization</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/
+├── _includes/          # Reusable HTML partials
+│   ├── footer.html
+│   ├── header.html
+│   └── orbs.html
+├── css/                # Stylesheets
+│   ├── common.css      # Variables, reset, shared styles
+│   ├── styles.css      # Home page styles
+│   ├── about.css       # About page styles
+│   └── competences.css # Skills page styles
+├── js/                 # JavaScript files
+│   ├── nav-active.js   # Navigation active state
+│   └── skills-animation.js  # Skills progress bars
+├── pages/              # Page content
+│   ├── about.html
+│   └── competences.html
+├── img/                # Images
+├── index.html          # Home page
+└── _site/              # Jekyll build output (do not edit)
+</code></pre></div></div>
+
+<h3 id="responsive-breakpoints">Responsive Breakpoints</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Mobile first approach */</span>
+<span class="c">/* Tablet: */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+
+<span class="c">/* Small mobile: */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">480px</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+
+<span class="c">/* Prefer reduced motion: */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">prefers-reduced-motion</span><span class="p">:</span> <span class="n">reduce</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="performance-considerations">Performance Considerations</h3>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">will-change: transform</code> sparingly for animated elements</li>
+  <li>Lazy load images where possible</li>
+  <li>Use Font Awesome icons via CDN for caching benefits</li>
+  <li>Use Google Fonts via CDN with proper display swap</li>
+  <li>Include <code class="language-plaintext highlighter-rouge">defer</code> or place scripts at end of body</li>
+</ul>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
