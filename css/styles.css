@@ -1,23 +1,4 @@
-:root {
-  --title-font: "Inter", sans-serif;
-  --text-font: "Inter", sans-serif;
-  --code-font: "JetBrains Mono", monospace;
-
-  --main-bg-color: #0f0f12;
-
-  --color-surface: #18181f;
-
-  --color-text-primary: #f0eff6;
-  --color-text-secondary: #8b8aa0;
-
-  --color-primary: #7c6af7;
-  --color-primary-dark: #5b4ed4;
-
-  --color-accent: #a78bfa;
-}
-
 main {
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,13 +8,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 150px;
 }
 
 .title {
   font-family: var(--code-font);
   font-size: 5rem;
   font-weight: 700;
-  margin-bottom: 100px;
   animation: changeCouleur 8s ease-in infinite;
 }
 
@@ -57,5 +38,31 @@ main {
   100% {
     color: var(--color-primary-dark);
     text-shadow: var(--color-primary-dark) 1px 1px 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-container {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title {
+    animation: none;
   }
 }

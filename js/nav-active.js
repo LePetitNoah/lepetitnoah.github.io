@@ -49,10 +49,38 @@
     return matched;
   }
 
+  function initHamburger() {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const navbar = document.querySelector('.navbar');
+
+    if (hamburgerBtn && navbar) {
+      hamburgerBtn.addEventListener('click', () => {
+        navbar.classList.toggle('navbar-open');
+        const isOpen = navbar.classList.contains('navbar-open');
+        hamburgerBtn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!hamburgerBtn.contains(e.target) && !navbar.contains(e.target)) {
+          navbar.classList.remove('navbar-open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navbar.classList.contains('navbar-open')) {
+          navbar.classList.remove('navbar-open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          hamburgerBtn.focus();
+        }
+      });
+    }
+  }
+
   function init() {
     if (setActiveLink()) return;
 
-    // Header might be injected asynchronously (w3-include-html).
+    initHamburger();
     const obs = new MutationObserver(() => {
       if (setActiveLink()) obs.disconnect();
     });

@@ -3,14 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Inter"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=JetBrains+Mono"
-    />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Mon Portfolio</title>
@@ -27,18 +19,34 @@
 </div>
  <header>
   <div class="logo-container">
-    <img src="/img/logo.png" alt="Logo" class="logo" />
+    <img src="/img/logo.png" alt="Logo du portfolio de Noah" class="logo" />
   </div>
+
+  <button class="hamburger-btn" aria-label="Menu de navigation" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
 
   <nav class="navbar">
     <ul class="navbar-list">
       <li class="navbar-item"><a href="/index.html">Accueil</a></li>
       <li class="navbar-item">
-        <a href="/pages/a-propos.html">À propos</a>
+        <a href="/pages/about.html">À propos</a>
       </li>
-      <li class="navbar-item"><a href="#">Compétences</a></li>
-      <li class="navbar-item"><a href="#">Projets</a></li>
-      <li class="navbar-item"><a href="#">Contact</a></li>
+      <li class="navbar-item">
+        <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+          >Compétences</a
+        >
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+          >Projets</a
+        >
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+          >Contact</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
@@ -56,6 +64,6 @@
   </div>
 </footer>
 
+    <script src="/js/nav-active.js"></script>
   </body>
-  <script src="/js/nav-active.js"></script>
 </html>
