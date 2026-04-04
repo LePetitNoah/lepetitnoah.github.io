@@ -195,12 +195,15 @@ main {
 .tool-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 64px;
+  height: 64px;
   gap: 0.5rem;
   background: var(--color-surface);
   border: 1px solid rgba(124, 106, 247, 0.3);
   border-radius: 0.75rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }

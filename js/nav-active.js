@@ -56,6 +56,7 @@
     if (hamburgerBtn && navbar) {
       hamburgerBtn.addEventListener('click', () => {
         navbar.classList.toggle('navbar-open');
+        hamburgerBtn.classList.toggle('is-active');
         const isOpen = navbar.classList.contains('navbar-open');
         hamburgerBtn.setAttribute('aria-expanded', isOpen);
       });
@@ -63,6 +64,7 @@
       document.addEventListener('click', (e) => {
         if (!hamburgerBtn.contains(e.target) && !navbar.contains(e.target)) {
           navbar.classList.remove('navbar-open');
+          hamburgerBtn.classList.remove('is-active');
           hamburgerBtn.setAttribute('aria-expanded', 'false');
         }
       });
@@ -70,6 +72,7 @@
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navbar.classList.contains('navbar-open')) {
           navbar.classList.remove('navbar-open');
+          hamburgerBtn.classList.remove('is-active');
           hamburgerBtn.setAttribute('aria-expanded', 'false');
           hamburgerBtn.focus();
         }
@@ -78,9 +81,9 @@
   }
 
   function init() {
-    if (setActiveLink()) return;
-
+    setActiveLink();
     initHamburger();
+
     const obs = new MutationObserver(() => {
       if (setActiveLink()) obs.disconnect();
     });
