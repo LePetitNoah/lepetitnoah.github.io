@@ -18,11 +18,207 @@ main {
 /* ============================================
    CONTENEUR PRINCIPAL
    ============================================ */
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 3rem;
+  width: 85%;
+  align-items: start;
+}
+
+.project-layout main {
+  display: block;
+}
+
 .project-detail {
-  width: 100%;
-  max-width: 900px;
+  width: 70%;
   position: relative;
   z-index: 1;
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+.project-sidebar {
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-section {
+  background: var(--color-surface);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+/* ============================================
+   SIDEBAR NAVIGATION
+   ============================================ */
+.sidebar-nav-section .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(124, 106, 247, 0.1);
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav .nav-item:hover {
+  background: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.sidebar-nav .nav-item i {
+  color: var(--color-primary);
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar-nav .nav-item:hover i {
+  color: var(--color-text-primary);
+}
+
+.sidebar-nav .nav-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar-nav .nav-item.home {
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.sidebar-nav .nav-item.home span {
+  font-size: 0.9rem;
+}
+
+.sidebar-nav .nav-label {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-nav .nav-item:hover .nav-label {
+  color: var(--color-text-primary);
+  opacity: 0.8;
+}
+
+.sidebar-nav .nav-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-nav .nav-item.prev {
+  justify-content: flex-start;
+}
+
+.sidebar-nav .nav-item.next {
+  justify-content: flex-end;
+}
+
+.sidebar-nav .nav-item.next .nav-content {
+  text-align: right;
+}
+
+.sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-title i {
+  color: var(--color-accent);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(124, 106, 247, 0.1);
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.sidebar-link i {
+  font-size: 1rem;
+  color: var(--color-primary);
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-link:hover i {
+  color: var(--color-text-primary);
+}
+
+.sidebar-link span {
+  font-size: 0.9rem;
+}
+
+.sidebar-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.sidebar-techs .tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(124, 106, 247, 0.1);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-techs .tech-item:hover {
+  background: rgba(124, 106, 247, 0.2);
+  transform: translateX(4px);
+}
+
+.sidebar-techs .tech-item i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  width: 24px;
+  text-align: center;
 }
 
 /* ============================================
@@ -391,6 +587,26 @@ main {
 /* ============================================
    RESPONSIVE - Tablette
    ============================================ */
+@media (max-width: 1024px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-sidebar {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-section {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - Tablette
+   ============================================ */
 @media (max-width: 768px) {
   .project-title {
     font-size: 2rem;
@@ -456,5 +672,13 @@ main {
 
   .nav-project.home {
     order: -1;
+  }
+
+  .project-sidebar {
+    flex-direction: column;
+  }
+
+  .sidebar-section {
+    min-width: auto;
   }
 }
