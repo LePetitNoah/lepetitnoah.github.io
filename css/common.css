@@ -59,9 +59,11 @@ main {
   flex: 1;
   margin-top: 100px;
   margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
 }
 
-body a{
+body a {
   cursor: pointer;
 }
 
@@ -298,17 +300,10 @@ a:focus-visible {
   outline: none;
 }
 
+/* ============================================
+   ANIMATED BACKGROUND ORBS
+   ============================================ */
 .hover-transition {
-  transition: all 0.3s ease-in-out;
-}
-
-main {
-  position: relative;
-  z-index: 1;
-  flex: 1;
-}
-
-footer {
   display: flex;
   flex-direction: column;
   width: 100%;
