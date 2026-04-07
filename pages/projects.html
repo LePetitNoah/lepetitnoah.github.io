@@ -1,6 +1,3 @@
----
----
-
 <!doctype html>
 <html lang="fr">
   <head>
@@ -12,14 +9,46 @@
   </head>
 
   <body>
-    {% include orbs.html %} {% include header.html %}
+    <div class="orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="orb orb-4"></span>
+      <span class="orb orb-5"></span>
+      <span class="orb orb-6"></span>
+    </div>
+    <header>
+      <button
+        class="hamburger-btn"
+        aria-label="Menu de navigation"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </button>
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="/index.html">Accueil</a></li>
+          <li class="navbar-item">
+            <a href="/pages/about.html">À propos</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/pages/skills.html">Compétences</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/pages/projects.html">Projets</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-      <!-- ============================================
-           SECTION PROJETS SCOLAIRES
-           Modifiable : ajouter/supprimer des projets
-           dans la section "school-projects-grid"
-      ============================================ -->
       <section class="projects-section">
         <h1 class="section-title">
           <i class="fas fa-graduation-cap"></i>
@@ -27,60 +56,122 @@
         </h1>
 
         <div class="projects-grid">
-          <!-- Exemple de projet scolaire :
-               - Modifier le titre, la description
-               - Modifier l'année
-               - Modifier les tags technologiques
-               - Ajouter/retirer les liens (GitHub, site, docs)
-               - href de la carte pointe vers /pages/project-detail.html
-          -->
-          <a href="/pages/project-detail.html" class="project-card">
+          <a
+            href="/pages/projects/scolaires/handicap-xr.html"
+            class="project-card"
+          >
             <div class="project-header">
-              <span class="project-badge en-cours">En cours</span>
+              <span class="project-badge termine">Terminé</span>
               <div class="project-header-row">
-                <h2 class="project-title">Nom du Projet</h2>
+                <h2 class="project-title">HandicapXR</h2>
                 <span class="project-year">2024</span>
               </div>
             </div>
             <p class="project-description">
-              Brève description du projet, des objectifs et des technologies
-              utilisées.
+              Il s'agit d'une application de réalité mixte destiné à l'Apple
+              Vision Pro dans le but de sensibiliser aux handicaps invisibles.
             </p>
             <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <span class="project-link" aria-label="Voir le code source">
-                <i class="fab fa-github"></i>
-              </span>
-              <span class="project-link" aria-label="Voir le site">
-                <i class="fas fa-external-link-alt"></i>
-              </span>
+              <span class="tag">Swift</span>
+              <span class="tag">Swift UI</span>
+              <span class="tag">Apple Vision Pro</span>
+              <span class="tag">VR/XR</span>
+              <span class="tag">Gitlab</span>
+              <span class="tag">Trello</span>
             </div>
           </a>
 
-          <a href="/pages/project-detail.html" class="project-card">
+          <a
+            href="/pages/projects/scolaires/vampire-survivor.html"
+            class="project-card"
+          >
             <div class="project-header">
               <span class="project-badge termine">Terminé</span>
               <div class="project-header-row">
-                <h2 class="project-title">Nom du Projet</h2>
-                <span class="project-year">2023</span>
+                <h2 class="project-title">Vampire Survivor</h2>
+                <span class="project-year">2025</span>
               </div>
             </div>
             <p class="project-description">
-              Brève description du projet, des objectifs et des technologies
-              utilisées.
+              Un Vampire Survivor like sur Godot Engine.
             </p>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
+              <span class="tag">Godot</span>
+              <span class="tag">GDScript</span>
+              <span class="tag">Github</span>
+              <span class="tag">Trello</span>
             </div>
-            <div class="project-links">
-              <span class="project-link" aria-label="Voir le code source">
-                <i class="fab fa-github"></i>
-              </span>
+          </a>
+
+          <a
+            href="/pages/projects/scolaires/pokemon-tcg.html"
+            class="project-card"
+          >
+            <div class="project-header">
+              <span class="project-badge termine">Terminé</span>
+              <div class="project-header-row">
+                <h2 class="project-title">Pokemon TCG Like</h2>
+                <span class="project-year">2025</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Il s'agit d'une application mobile où le joueur collectionne des
+              cartes Pokémon.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">API</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Github</span>
+              <span class="tag">Trello</span>
+            </div>
+          </a>
+
+          <a href="/pages/projects/scolaires/edukid.html" class="project-card">
+            <div class="project-header">
+              <span class="project-badge termine">Terminé</span>
+              <div class="project-header-row">
+                <h2 class="project-title">EDUKID</h2>
+                <span class="project-year">2026</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Une application mobile à but pédagogique destinée aux jeunes
+              enfants pour les accompagner dans l'apprentissage des
+              fondamentaux.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Android Studio</span>
+              <span class="tag">Gitlab</span>
+              <span class="tag">Trello</span>
+            </div>
+          </a>
+
+          <a
+            href="/pages/projects/scolaires/runtrack.html"
+            class="project-card"
+          >
+            <div class="project-header">
+              <span class="project-badge termine">Terminé</span>
+              <div class="project-header-row">
+                <h2 class="project-title">RunTrack</h2>
+                <span class="project-year">2026</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Une application mobile qui permet de suivre ses courses à l'aide
+              d'un objet connecté.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">C++</span>
+              <span class="tag">Gitlab</span>
+              <span class="tag">Trello</span>
             </div>
           </a>
         </div>
@@ -171,7 +262,12 @@
       </section>
     </main>
 
-    {% include footer.html %}
+    <footer>
+      <div class="copyright-container">
+        <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+      </div>
+    </footer>
+
     <script src="/js/nav-active.js" defer></script>
   </body>
 </html>
