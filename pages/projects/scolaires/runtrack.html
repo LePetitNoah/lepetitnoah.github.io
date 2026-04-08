@@ -44,12 +44,35 @@
             </h2>
             <div class="section-content">
               <p>
-                Description détaillée du projet. Expliquez le contexte, les
-                objectifs et ce que vous avez accompli.
+                Dans le cadre du cours consacré aux objets connectés, nous avons
+                été amenés à concevoir une application mobile associée à un
+                dispositif connecté. J’ai réalisé ce projet en binôme, en me
+                concentrant principalement sur le développement mobile, car
+                j’avais déjà une vision claire du fonctionnement de
+                l’application. Cela ne m’a toutefois pas empêché de contribuer
+                également à la partie embarquée. L’application RunTrack a pour
+                objectif de suivre les performances en course à pied. Il suffit
+                de se connecter à l’objet connecté, de démarrer une session,
+                puis de commencer à courir. Équipé d’un GPS, l’appareil
+                enregistre à intervalles réguliers des données telles que la
+                position, l’altitude et d’autres informations utiles. Une fois
+                la session terminée, il suffit d’appuyer sur le bouton «
+                Terminer la session » directement sur l’objet connecté : les
+                données sont alors transmises à l’application mobile, puis
+                stockées dans une base de données via Firebase. L’utilisateur
+                peut ensuite consulter ses performances, visualiser son parcours
+                sur une carte et analyser ses statistiques de course.
               </p>
               <p>
-                Paragraphe supplémentaire pour approfondir certains aspects du
-                projet.
+                Ce projet a été réalisé avec Flutter pour la partie mobile et en
+                C++ (Arduino) pour le développement embarqué. J’ai utilisé
+                Firebase afin de gérer à la fois la base de données et
+                l’authentification des utilisateurs. Par ailleurs, une API de
+                cartographie a été intégrée pour permettre la visualisation des
+                parcours de course sur une carte interactive. Ce travail m’a
+                permis de renforcer mes compétences en développement mobile, en
+                intégration d’API, ainsi qu’en gestion autonome d’un projet sur
+                le long terme.
               </p>
             </div>
           </section>
@@ -63,13 +86,29 @@
               <div class="challenge-item">
                 <h3>Défi</h3>
                 <p>
-                  Description du défi rencontré.
+                  La principale difficulté rencontrée au cours de ce projet a
+                  concerné la communication Bluetooth entre l’application mobile
+                  et l’objet connecté. Si la connexion à l’appareil ainsi que
+                  l’envoi de données depuis l’application vers l’objet ont pu
+                  être mis en place de manière fiable, la transmission des
+                  informations dans le sens inverse, de l’objet vers
+                  l’application, s’est révélée plus complexe et a engendré
+                  plusieurs complications.
                 </p>
               </div>
               <div class="solution-item">
                 <h3>Solution trouvée</h3>
                 <p>
-                  Comment vous avez résolu le problème.
+                  Pour parvenir à établir une communication fonctionnelle dans
+                  les deux sens, nous avons d’abord étudié la documentation des
+                  bibliothèques utilisées, à savoir Flutter Blue Plus côté
+                  mobile et BLE sur Arduino. En parallèle, nous avons consulté
+                  divers tutoriels et forums de développeurs afin d’identifier
+                  les points de blocage. Après de nombreux essais, erreurs et
+                  ajustements dans notre code, nous avons finalement réussi à
+                  mettre en place une communication bidirectionnelle stable
+                  entre l’application mobile et l’objet connecté, assurant ainsi
+                  un échange fluide des données de course.
                 </p>
               </div>
             </div>
@@ -82,8 +121,11 @@
             </h2>
             <ul class="skills-list">
               <li>Développement d'applications mobiles</li>
-              <li>Intégration d'APIs d'intelligence artificielle</li>
-              <li>Travail en autonomie sur un projet long terme</li>
+              <li>Intégration d'API</li>
+              <li>Communication avec un objet connecté</li>
+              <li>Base de données</li>
+              <li>Authentification</li>
+              <li>Travail en équipe</li>
             </ul>
           </section>
 
@@ -145,6 +187,15 @@
               </div>
               <div class="tech-item" title="Arduino">
                 <i class="devicon-arduino-plain"></i>
+              </div>
+              <div class="tech-item" title="Arduino">
+                <i class="devicon-firebase-plain"></i>
+              </div>
+              <div class="tech-item" title="Arduino">
+                <i class="devicon-trello-plain"></i>
+              </div>
+              <div class="tech-item" title="Arduino">
+                <i class="devicon-github-plain"></i>
               </div>
             </div>
           </div>
