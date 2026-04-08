@@ -29,6 +29,10 @@
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
+  --spacing-section: 4rem;
+
+  --card-glow: rgba(124, 106, 247, 0.25);
+  --card-border: rgba(124, 106, 247, 0.3);
 }
 
 html {
