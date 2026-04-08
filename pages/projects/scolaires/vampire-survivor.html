@@ -9,44 +9,7 @@
   </head>
 
   <body>
-    <div class="orbs" aria-hidden="true">
-      <span class="orb orb-1"></span>
-      <span class="orb orb-2"></span>
-      <span class="orb orb-3"></span>
-      <span class="orb orb-4"></span>
-      <span class="orb orb-5"></span>
-      <span class="orb orb-6"></span>
-    </div>
-    <header>
-      <button
-        class="hamburger-btn"
-        aria-label="Menu de navigation"
-        aria-expanded="false"
-      >
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-times"></i>
-      </button>
-
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a href="/index.html">Accueil</a></li>
-          <li class="navbar-item">
-            <a href="/pages/about.html">À propos</a>
-          </li>
-          <li class="navbar-item">
-            <a href="/pages/skills.html">Compétences</a>
-          </li>
-          <li class="navbar-item">
-            <a href="/pages/projects.html">Projets</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    {% include orbs.html %} {% include header.html %}
 
     <main>
       <div class="project-layout">
