@@ -44,12 +44,37 @@
             </h2>
             <div class="section-content">
               <p>
-                Description détaillée du projet. Expliquez le contexte, les
-                objectifs et ce que vous avez accompli.
+                Ce projet s’inscrit dans le cadre des enseignements en
+                développement mobile suivis lors de ma troisième année de BUT
+                Informatique. L’objectif était de concevoir une application
+                Android en Kotlin et en Flutter intégrant plusieurs éléments
+                clés : authentification, base de données locale, utilisation
+                d’une API et mise en place d’une intégration continue, le tout
+                en appliquant une méthodologie agile en binôme. Nous avons
+                choisi de développer une application inspirée à la fois de
+                Pokémon TCG, centrée sur la collection et les combats de cartes,
+                et de Pokémon GO, intégrant des mécaniques de déplacement et de
+                carte. Toutefois, après une phase d’analyse, nous avons constaté
+                que le projet était trop ambitieux pour le temps imparti. Nous
+                avons donc recentré nos efforts sur la fonctionnalité principale
+                : la collection de cartes.
               </p>
               <p>
-                Paragraphe supplémentaire pour approfondir certains aspects du
-                projet.
+                Nous avons commencé par définir le modèle de données des cartes
+                afin de pouvoir les récupérer via une API. Ensuite, nous avons
+                utilisé Room pour mettre en place une base de données locale
+                destinée à stocker les cartes de la collection de l’utilisateur.
+                Une fois cette structure en place, nous avons intégré l’API afin
+                de valider le bon fonctionnement de l’ensemble. Par la suite,
+                nous avons ajouté un système d’authentification avec Firebase,
+                permettant aux utilisateurs de créer un compte et de sauvegarder
+                leur collection. Enfin, nous avons mis en place une chaîne
+                d’intégration continue avec Bitrise pour automatiser les tests
+                et le déploiement. Une fois la version Kotlin finalisée, nous
+                avons identifié les fonctionnalités essentielles à porter vers
+                Flutter, en raison du temps plus limité. Au final, nous
+                disposons de deux versions de l’application, en Kotlin et en
+                Flutter, permettant toutes deux de collectionner des cartes.
               </p>
             </div>
           </section>
@@ -63,13 +88,33 @@
               <div class="challenge-item">
                 <h3>Défi</h3>
                 <p>
-                  Description du défi rencontré.
+                  La principale difficulté rencontrée au cours du projet
+                  concernait l’API initialement choisie. Celle-ci présentait des
+                  temps de réponse trop élevés et de fréquents timeouts. Nous
+                  avons confirmé ce problème via Postman, où seule une requête
+                  sur vingt aboutissait correctement. Cette instabilité rendait
+                  impossible la récupération fiable des cartes, notamment lors
+                  d’actions clés comme l’ouverture de boosters.
                 </p>
               </div>
               <div class="solution-item">
                 <h3>Solution trouvée</h3>
                 <p>
-                  Comment vous avez résolu le problème.
+                  Face à cette contrainte, nous avons décidé de développer notre
+                  propre API en nous appuyant sur les données de l’API
+                  d’origine. Dans un contexte académique, nous avons enregistré
+                  les données lors des rares appels fonctionnels afin de les
+                  réutiliser. Nous avons conçu cette API avec Ktor, un framework
+                  Kotlin dédié au développement d’API. Nous avons mis en place
+                  les routes nécessaires pour gérer l’enregistrement et la
+                  récupération des cartes, en utilisant la sérialisation JSON,
+                  et connecté l’ensemble à une base de données MySQL.
+                  Initialement, l’API et la base de données étaient hébergées
+                  sur Render via une offre gratuite, mais après un mois, la base
+                  est devenue inaccessible en raison des limitations du plan.
+                  Nous avons donc opté pour un hébergement en local. Finalement,
+                  nous avons obtenu une API fiable et performante, nous
+                  permettant de récupérer les cartes de manière fluide.
                 </p>
               </div>
             </div>
@@ -82,8 +127,12 @@
             </h2>
             <ul class="skills-list">
               <li>Développement d'applications mobiles</li>
-              <li>Intégration d'APIs d'intelligence artificielle</li>
-              <li>Travail en autonomie sur un projet long terme</li>
+              <li>Intégration et création d'API</li>
+              <li>Authentification</li>
+              <li>Base de données</li>
+              <li>Intégration continu</li>
+              <li>Méthodes agiles</li>
+              <li>Travail en équipe</li>
             </ul>
           </section>
 
@@ -116,10 +165,13 @@
               Liens
             </h3>
             <div class="sidebar-links">
-              <span class="sidebar-link sidebar-link-inactive">
+              <a
+                href="https://github.com/LePetitNoah/ProjetKotlin-Vrijhof-Mercado/tree/deployProd"
+                class="sidebar-link sidebar-link-active"
+              >
                 <i class="fab fa-github"></i>
                 <span>Code source</span>
-              </span>
+              </a>
               <span class="sidebar-link sidebar-link-inactive">
                 <i class="fas fa-globe"></i>
                 <span>Site web</span>
@@ -140,11 +192,23 @@
               <div class="tech-item" title="Kotlin">
                 <i class="devicon-kotlin-plain"></i>
               </div>
+              <div class="tech-item" title="Firebase">
+                <i class="devicon-firebase-plain"></i>
+              </div>
+              <div class="tech-item" title="Postman">
+                <i class="devicon-postman-plain"></i>
+              </div>
               <div class="tech-item" title="Flutter">
                 <i class="devicon-flutter-plain"></i>
               </div>
               <div class="tech-item" title="Dart">
                 <i class="devicon-dart-plain"></i>
+              </div>
+              <div class="tech-item" title="Github">
+                <i class="devicon-github-plain"></i>
+              </div>
+              <div class="tech-item" title="Trello">
+                <i class="devicon-trello-plain"></i>
               </div>
             </div>
           </div>
