@@ -1,8 +1,8 @@
 ## A faire
 
 - Compléter les projets scolaires
-- Créer les pages pour les projets personnels
 - Compléter les projets personnels
+- Ajouter des centres d'intérêts
 - Ajouter la page de contact
 - S'assurer que tous les boutons ont une action
 - Ajouter le download du Cv
