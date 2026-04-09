@@ -22,7 +22,8 @@ Auto-deploys on push to `main` via GitHub Pages.
 ├── css/                # common.css (variables), styles.css, about.css, skills.css, projects.css, project-detail.css
 ├── js/                 # nav-active.js, skills-animation.js
 ├── pages/              # about.html, skills.html, projects.html
-│   └── projects/       # scolaires/ (school projects), project-detail.html
+│   └── projects/       # personnel/ (personal), scolaire/ (school projects)
+├── templates/          # Reusable HTML templates (project-detail.html)
 ├── img/                # Images
 ├── index.html          # Home page
 └── _site/              # Build output (do not edit)

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/project-detail.css" />
+    <title>Mon Portfolio | HandicapXR</title>
+  </head>
+
+  <body>
+    <div class="orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="orb orb-4"></span>
+  <span class="orb orb-5"></span>
+  <span class="orb orb-6"></span>
+</div>
+ <header>
+  <button
+    class="hamburger-btn"
+    aria-label="Menu de navigation"
+    aria-expanded="false"
+  >
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </button>
+
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a href="/index.html">Accueil</a></li>
+      <li class="navbar-item">
+        <a href="/pages/about.html">À propos</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/skills.html">Compétences</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/projects.html">Projets</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+      <div class="project-layout">
+        <article class="project-detail">
+          <a href="/pages/projects.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour aux projets
+          </a>
+
+          <div class="project-hero">
+            <div class="project-header">
+              <h1 class="project-title">HandicapXR</h1>
+              <div class="project-status">
+                <span class="project-badge termine">Terminé</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-year">
+                <i class="fas fa-calendar"></i>
+                2024
+              </span>
+            </div>
+          </div>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-info-circle"></i>
+              Description
+            </h2>
+            <div class="section-content">
+              <p>
+                Ce projet constitue le travail de groupe réalisé durant ma
+                deuxième année de BUT informatique. Plusieurs sujets nous
+                étaient proposés par les enseignants, qui assuraient à la fois
+                le rôle de client et de tuteur. Nous avons choisi de développer
+                une application destinée à l’Apple Vision Pro, visant à
+                sensibiliser les entreprises aux handicaps invisibles. Ce choix
+                s’explique par plusieurs motivations : l’accès limité à cet
+                équipement innovant, notre intérêt commun pour les technologies
+                VR/XR en pleine expansion, ainsi que l’opportunité d’apprendre à
+                programmer en Swift via Xcode, un environnement que nous ne
+                maîtrisions pas encore. Ce projet représentait donc une occasion
+                idéale d’acquérir de nouvelles compétences techniques tout en
+                travaillant sur une thématique qui nous tenait à cœur. Nous
+                avons mené ce travail en autonomie, en équipe de quatre, tout au
+                long de l’année.
+              </p>
+              <p>
+                Dans un premier temps, nous avons effectué des recherches
+                approfondies sur les différents types de handicaps invisibles
+                ainsi que sur les meilleures façons de les représenter. Pour
+                cela, nous avons sollicité l’infirmière de notre IUT, dont les
+                conseils se sont révélés précieux pour orienter nos travaux et
+                garantir un rendu aussi fidèle que possible. Nous avons ainsi
+                retenu trois handicaps à illustrer : le glaucome, la DMLA et la
+                schizophrénie. Par la suite, nous avons réparti les tâches en
+                deux groupes : l’un se consacrait à l’apprentissage de Swift,
+                tandis que l’autre réalisait des "Proof of Concept" autour de la
+                réalité virtuelle et de la réalité mixte. Nous avons utilisé les
+                bibliothèques ARKit et RealityKit pour la partie liée à la
+                réalité augmentée, et Reality Composer Pro pour la création des
+                contenus 3D. L’ensemble de ces éléments a ensuite été intégré
+                dans différentes vues, notamment une vue immersive, afin de
+                construire notre application. Pour la démonstration, nous avons
+                imaginé une mise en situation dans laquelle l’utilisateur
+                réalise des actions du quotidien, comme se servir un verre d’eau
+                ou tenter d’attraper un objet en mouvement, afin de mieux
+                comprendre les difficultés rencontrées par les personnes
+                concernées.
+              </p>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-lightbulb"></i>
+              Défis & Solutions
+            </h2>
+            <div class="challenge-solution-container">
+              <div class="challenge-item">
+                <h3>Défi</h3>
+                <p>
+                  La principale difficulté à laquelle nous avons été confrontés
+                  concernait le choix initial de la technologie. À plusieurs
+                  reprises, certains obstacles techniques nous ont contraints à
+                  repartir de zéro dans notre apprentissage.
+                </p>
+              </div>
+              <div class="solution-item">
+                <h3>Solution trouvée</h3>
+                <p>
+                  Nous avons d’abord opté pour Unity, car l’un des membres de
+                  l’équipe possédait déjà une certaine expérience avec ce
+                  moteur. Toutefois, il nous a fallu apprendre à concevoir des
+                  expériences en réalité virtuelle avec cet outil. Après une
+                  semaine de travail, nous avons découvert que le déploiement
+                  d’une application Unity sur l’Apple Vision Pro nécessitait une
+                  licence payante, trop coûteuse dans le cadre d’un projet
+                  étudiant. Après discussion avec notre tuteur, celui-ci nous a
+                  orientés vers Three.js, une bibliothèque JavaScript permettant
+                  de créer des environnements 3D dans un navigateur web. Nous
+                  avons donc envisagé une application web, ce qui nous a permis
+                  de développer nos compétences en développement web et
+                  d’obtenir un rendu satisfaisant. Néanmoins, la mise en place
+                  des tests, notamment pour la réalité virtuelle dans le
+                  navigateur, s’est révélée complexe. Finalement, nous avons
+                  choisi de nous tourner vers SwiftUI. Cette décision nous a
+                  permis d’acquérir une solide expérience en développement iOS
+                  et d’obtenir un résultat final très convaincant, proche des
+                  objectifs que nous nous étions fixés.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-star"></i>
+              Compétences acquises
+            </h2>
+            <ul class="skills-list">
+              <li>Développement d'application sur Apple Vision Pro</li>
+              <li>Prise en main de Swift et SwiftUI</li>
+              <li>Utilisation de la réalité mixte</li>
+              <li>Compréhension de la 3D</li>
+              <li>Travail en autonomie sur un projet long terme</li>
+              <li>Méthodes agiles</li>
+              <li>Travail en équipe</li>
+              <li>Répondre aux besoins d'un client</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-images"></i>
+              Aperçu
+            </h2>
+            <div class="screenshots-grid">
+              <div class="screenshot-item">
+                <img
+                  src="/img/project-placeholder.png"
+                  alt="Capture d'écran 1"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/project-placeholder.png"
+                  alt="Capture d'écran 2"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside class="project-sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-link"></i>
+              Liens
+            </h3>
+            <div class="sidebar-links">
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fab fa-github"></i>
+                <span>Code source</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-globe"></i>
+                <span>Site web</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-file-alt"></i>
+                <span>Documentation</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-code"></i>
+              Technologies
+            </h3>
+            <div class="sidebar-techs">
+              <div class="tech-item" title="Swift">
+                <i class="devicon-swift-plain"></i>
+              </div>
+              <div class="tech-item" title="XCode">
+                <i class="devicon-xcode-plain"></i>
+              </div>
+              <div class="tech-item" title="Apple Vision Pro">
+                <i class="devicon-apple-plain"></i>
+              </div>
+              <div class="tech-item" title="Github">
+                <i class="devicon-github-plain"></i>
+              </div>
+              <div class="tech-item" title="SwiftUI">
+                <i class="devicon-trello-plain"></i>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="copyright-container">
+        <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="/js/nav-active.js" defer></script>
+  </body>
+</html>

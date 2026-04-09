@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/project-detail.css" />
+    <title>Mon Portfolio | EDUKID</title>
+  </head>
+
+  <body>
+    <div class="orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="orb orb-4"></span>
+  <span class="orb orb-5"></span>
+  <span class="orb orb-6"></span>
+</div>
+ <header>
+  <button
+    class="hamburger-btn"
+    aria-label="Menu de navigation"
+    aria-expanded="false"
+  >
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </button>
+
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a href="/index.html">Accueil</a></li>
+      <li class="navbar-item">
+        <a href="/pages/about.html">À propos</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/skills.html">Compétences</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/projects.html">Projets</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-disabled" aria-disabled="true" tabindex="-1"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+      <div class="project-layout">
+        <article class="project-detail">
+          <a href="/pages/projects.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour aux projets
+          </a>
+
+          <div class="project-hero">
+            <div class="project-header">
+              <h1 class="project-title">EDUKID</h1>
+              <div class="project-status">
+                <span class="project-badge termine">Terminé</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-year">
+                <i class="fas fa-calendar"></i>
+                2026
+              </span>
+            </div>
+          </div>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-info-circle"></i>
+              Description
+            </h2>
+            <div class="section-content">
+              <p>
+                Contrairement aux autres projets présentés dans ce portfolio,
+                EDUKID n’a pas été entièrement conçu par notre équipe. Il s’agit
+                d’une application mobile développée par des étudiants des
+                promotions précédentes. Conçue en Java, EDUKID a une vocation
+                pédagogique : elle permet aux enfants d’apprendre les chiffres
+                et les lettres de manière ludique et interactive, en sollicitant
+                à la fois leurs capacités visuelles et auditives.
+              </p>
+              <p>
+                L’application propose plusieurs fonctionnalités, à commencer par
+                un système de profils permettant à plusieurs enfants de
+                l’utiliser, accompagné d’un suivi statistique pour mesurer leur
+                progression. Elle comprend également quatre mini-jeux répartis
+                en deux catégories (chiffres et lettres) : Memory, Écoute,
+                Dessine et Mot à trou. Certains jeux, comme le Memory, intègrent
+                un système de niveaux, bien que celui-ci ne soit pas entièrement
+                opérationnel. Dans ce contexte, notre objectif était d’améliorer
+                l’existant en corrigeant les anomalies, en enrichissant les
+                fonctionnalités et en optimisant la qualité du code.
+              </p>
+              <p>
+                Pour atteindre cet objectif, nous avons d’abord étudié en détail
+                l’application et sa base de code. Développée plusieurs années
+                auparavant, celle-ci ne fonctionnait plus correctement : des
+                bibliothèques obsolètes ou introuvables, des incompatibilités
+                avec les versions récentes d’Android ainsi que des erreurs de
+                code empêchaient son exécution. Nous avons donc commencé par
+                résoudre ces problèmes afin de relancer l’application.
+              </p>
+              <p>
+                Notre analyse a ensuite mis en évidence plusieurs faiblesses
+                majeures. Bien que globalement complète et fonctionnelle,
+                l’application souffrait d’un manque de qualité en termes de
+                code, d’architecture et de maintenabilité. Elle était développée
+                en Java, un langage désormais moins recommandé pour Android. De
+                plus, aucune architecture claire n’était respectée, rendant le
+                code difficile à comprendre et à faire évoluer. La logique
+                métier était fortement mêlée à la logique de présentation, sans
+                réelle séparation des responsabilités. Enfin, l’interface
+                utilisateur n’était pas adaptée aux différentes tailles d’écran,
+                provoquant des problèmes d’affichage.
+              </p>
+              <p>
+                Pour remédier à ces points, nous avons entrepris plusieurs
+                améliorations. Nous avons d’abord migré l’ensemble du code vers
+                Kotlin, le langage actuellement privilégié pour le développement
+                Android. Ensuite, nous avons mis en place une architecture MVVM
+                afin de mieux structurer l’application, notamment en séparant la
+                logique métier de l’interface utilisateur et en utilisant des
+                coroutines pour gérer les interactions avec la base de données.
+                Nous avions également prévu de remplacer les vues XML par
+                Jetpack Compose, mais faute de temps, cette évolution a été
+                reportée. Une fois ces transformations réalisées, nous avons
+                enrichi le contenu des jeux existants.
+              </p>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-lightbulb"></i>
+              Défis & Solutions
+            </h2>
+            <div class="challenge-solution-container">
+              <div class="challenge-item">
+                <h3>Défi</h3>
+                <p>
+                  Le principal défi de ce projet a résidé dans le refactoring du
+                  code. Reprendre un projet existant s’avère souvent plus
+                  complexe que de partir de zéro, ce qui nous a demandé un
+                  investissement important en temps. Ce travail, bien
+                  qu’invisible pour l’utilisateur final, est essentiel : il
+                  améliore la robustesse, la lisibilité et la maintenabilité de
+                  l’application sur le long terme.
+                </p>
+              </div>
+              <div class="solution-item">
+                <h3>Solution trouvée</h3>
+                <p>
+                  Pour effectuer la migration vers Kotlin, nous avons adopté une
+                  approche progressive. Nous avons utilisé une intelligence
+                  artificielle pour traduire le code Java par segments, puis
+                  nous avons relu, ajusté et approfondi notre compréhension des
+                  parties les plus complexes. Une fois la conversion effectuée,
+                  nous avons procédé à des phases de test et de débogage. Après
+                  plusieurs semaines de travail, nous avons obtenu une
+                  application fonctionnelle, fidèle à la version d’origine.
+                </p>
+                <p>
+                  Concernant l’architecture MVVM, il s’agissait principalement
+                  d’un travail de réorganisation. Nous avons d’abord créé les
+                  différentes couches nécessaires, puis réparti le code selon
+                  leurs responsabilités respectives. Ce processus nous a
+                  également permis d’améliorer la qualité globale du code,
+                  notamment en supprimant les redondances et en renforçant sa
+                  lisibilité. Nous nous sommes appuyés sur notre expérience
+                  acquise avec le projet Pokémon TCG, développé en parallèle
+                  avec une architecture MVVM, ce qui nous a servi de référence
+                  pour restructurer EDUKID efficacement.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-star"></i>
+              Compétences acquises
+            </h2>
+            <ul class="skills-list">
+              <li>Développement d'applications mobiles</li>
+              <li>Mise en place d'une architecture</li>
+              <li>Refactoring de code</li>
+              <li>Reprise de code</li>
+              <li>Méthodes agiles</li>
+              <li>Travail en équipe</li>
+              <li>Travail en autonomie sur un projet long terme</li>
+              <li>Répondre aux besoins d'un client</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-images"></i>
+              Aperçu
+            </h2>
+            <div class="screenshots-grid">
+              <div class="screenshot-item">
+                <img
+                  src="/img/project-placeholder.png"
+                  alt="Capture d'écran 1"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/project-placeholder.png"
+                  alt="Capture d'écran 2"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside class="project-sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-link"></i>
+              Liens
+            </h3>
+            <div class="sidebar-links">
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fab fa-github"></i>
+                <span>Code source</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-globe"></i>
+                <span>Site web</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-file-alt"></i>
+                <span>Documentation</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-code"></i>
+              Technologies
+            </h3>
+            <div class="sidebar-techs">
+              <div class="tech-item" title="Kotlin">
+                <i class="devicon-kotlin-plain"></i>
+              </div>
+              <div class="tech-item" title="Android Studio">
+                <i class="devicon-androidstudio-plain"></i>
+              </div>
+              <div class="tech-item" title="Github">
+                <i class="devicon-github-plain"></i>
+              </div>
+              <div class="tech-item" title="Trello">
+                <i class="devicon-trello-plain"></i>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="copyright-container">
+        <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="/js/nav-active.js" defer></script>
+  </body>
+</html>

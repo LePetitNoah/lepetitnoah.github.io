@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/project-detail.css" />
-    <title>Mon Portfolio | Vampire Survivor</title>
+    <title>Mon Portfolio | Pokemon TCG</title>
   </head>
 
   <body>
@@ -59,7 +59,7 @@
 
           <div class="project-hero">
             <div class="project-header">
-              <h1 class="project-title">Vampire Survivor</h1>
+              <h1 class="project-title">Pokemon TCG</h1>
               <div class="project-status">
                 <span class="project-badge termine">Terminé</span>
               </div>
@@ -79,39 +79,38 @@
             </h2>
             <div class="section-content">
               <p>
-                Dans le cadre d'un cours consacré au développement de jeux
-                vidéo, notre objectif principal consistait à concevoir un jeu
-                intégrant plusieurs exigences, telles que la gestion du score,
-                la génération procédurale infinie des niveaux ainsi que
-                l'intégration de divers éléments de gameplay. Pour mener à bien
-                ce projet, nous disposions d'un délai de deux mois. Il
-                s'agissait d'un travail individuel, réalisé en totale autonomie.
+                Ce projet s’inscrit dans le cadre des enseignements en
+                développement mobile suivis lors de ma troisième année de BUT
+                Informatique. L’objectif était de concevoir une application
+                Android en Kotlin et en Flutter intégrant plusieurs éléments
+                clés : authentification, base de données locale, utilisation
+                d’une API et mise en place d’une intégration continue, le tout
+                en appliquant une méthodologie agile en binôme. Nous avons
+                choisi de développer une application inspirée à la fois de
+                Pokémon TCG, centrée sur la collection et les combats de cartes,
+                et de Pokémon GO, intégrant des mécaniques de déplacement et de
+                carte. Toutefois, après une phase d’analyse, nous avons constaté
+                que le projet était trop ambitieux pour le temps imparti. Nous
+                avons donc recentré nos efforts sur la fonctionnalité principale
+                : la collection de cartes.
               </p>
               <p>
-                Lors du développement de ce projet, mon objectif n'était pas de
-                créer un jeu aux graphismes très aboutis ni au gameplay
-                particulièrement complexe. Je cherchais avant tout à explorer
-                les différentes possibilités offertes et à me familiariser avec
-                le moteur de jeu, dans une perspective de projets futurs. Voici
-                les différentes mécaniques présentes dans le jeu :
+                Nous avons commencé par définir le modèle de données des cartes
+                afin de pouvoir les récupérer via une API. Ensuite, nous avons
+                utilisé Room pour mettre en place une base de données locale
+                destinée à stocker les cartes de la collection de l’utilisateur.
+                Une fois cette structure en place, nous avons intégré l’API afin
+                de valider le bon fonctionnement de l’ensemble. Par la suite,
+                nous avons ajouté un système d’authentification avec Firebase,
+                permettant aux utilisateurs de créer un compte et de sauvegarder
+                leur collection. Enfin, nous avons mis en place une chaîne
+                d’intégration continue avec Bitrise pour automatiser les tests
+                et le déploiement. Une fois la version Kotlin finalisée, nous
+                avons identifié les fonctionnalités essentielles à porter vers
+                Flutter, en raison du temps plus limité. Au final, nous
+                disposons de deux versions de l’application, en Kotlin et en
+                Flutter, permettant toutes deux de collectionner des cartes.
               </p>
-              <ul class="content-list">
-                <li class="content-list-item">
-                  Déplacement du joueur clavier/joystick
-                </li>
-                <li class="content-list-item">
-                  Attaque automatique de l'ennemi le plus proche
-                </li>
-                <li class="content-list-item">Génération du niveau infinie</li>
-                <li class="content-list-item">Choix entre différentes armes</li>
-                <li class="content-list-item">Spawn croissant de monstre</li>
-                <li class="content-list-item">Power ups</li>
-                <li class="content-list-item">Système de niveau et d'xp</li>
-                <li class="content-list-item">
-                  Cartes d'amélioration des statistiques
-                </li>
-                <li class="content-list-item">Scores</li>
-              </ul>
             </div>
           </section>
 
@@ -124,21 +123,33 @@
               <div class="challenge-item">
                 <h3>Défi</h3>
                 <p>
-                  La principale difficulté à laquelle j'ai été confronté durant
-                  ce projet concernait l'architecture des nœuds ainsi que les
-                  interactions entre eux, un domaine qui m'était entièrement
-                  nouveau.
+                  La principale difficulté rencontrée au cours du projet
+                  concernait l’API initialement choisie. Celle-ci présentait des
+                  temps de réponse trop élevés et de fréquents timeouts. Nous
+                  avons confirmé ce problème via Postman, où seule une requête
+                  sur vingt aboutissait correctement. Cette instabilité rendait
+                  impossible la récupération fiable des cartes, notamment lors
+                  d’actions clés comme l’ouverture de boosters.
                 </p>
               </div>
               <div class="solution-item">
                 <h3>Solution trouvée</h3>
                 <p>
-                  Les sessions de live coding durant le cours m'ont été très
-                  utiles pour poser les bases de l'organisation des nœuds. Par
-                  la suite, j'ai effectué des recherches en ligne afin de
-                  consulter des projets similaires et m'inspirer de leur
-                  architecture. J'ai également beaucoup expérimenté de manière
-                  autonome pour élaborer une structure adaptée à mes besoins.
+                  Face à cette contrainte, nous avons décidé de développer notre
+                  propre API en nous appuyant sur les données de l’API
+                  d’origine. Dans un contexte académique, nous avons enregistré
+                  les données lors des rares appels fonctionnels afin de les
+                  réutiliser. Nous avons conçu cette API avec Ktor, un framework
+                  Kotlin dédié au développement d’API. Nous avons mis en place
+                  les routes nécessaires pour gérer l’enregistrement et la
+                  récupération des cartes, en utilisant la sérialisation JSON,
+                  et connecté l’ensemble à une base de données MySQL.
+                  Initialement, l’API et la base de données étaient hébergées
+                  sur Render via une offre gratuite, mais après un mois, la base
+                  est devenue inaccessible en raison des limitations du plan.
+                  Nous avons donc opté pour un hébergement en local. Finalement,
+                  nous avons obtenu une API fiable et performante, nous
+                  permettant de récupérer les cartes de manière fluide.
                 </p>
               </div>
             </div>
@@ -150,9 +161,14 @@
               Compétences acquises
             </h2>
             <ul class="skills-list">
-              <li>Prise en main du moteur Godot</li>
-              <li>Compréhension de la 3D accrue</li>
-              <li>Concepts de bases du développement de jeu vidéo</li>
+              <li>Développement d'applications mobiles</li>
+              <li>Intégration et création d'API</li>
+              <li>Authentification</li>
+              <li>Base de données</li>
+              <li>Intégration continu</li>
+              <li>Méthodes agiles</li>
+              <li>Travail en équipe</li>
+              <li>Répondre à des besoins spécifiés</li>
             </ul>
           </section>
 
@@ -186,7 +202,7 @@
             </h3>
             <div class="sidebar-links">
               <a
-                href="https://github.com/BUT-BOURG-25-26/projet-godot-but3-noah"
+                href="https://github.com/LePetitNoah/ProjetKotlin-Vrijhof-Mercado/tree/deployProd"
                 class="sidebar-link sidebar-link-active"
               >
                 <i class="fab fa-github"></i>
@@ -209,10 +225,22 @@
               Technologies
             </h3>
             <div class="sidebar-techs">
-              <div class="tech-item" title="Godot">
-                <i class="devicon-godot-plain"></i>
+              <div class="tech-item" title="Kotlin">
+                <i class="devicon-kotlin-plain"></i>
               </div>
-              <div class="tech-item" title="GitHub">
+              <div class="tech-item" title="Firebase">
+                <i class="devicon-firebase-plain"></i>
+              </div>
+              <div class="tech-item" title="Postman">
+                <i class="devicon-postman-plain"></i>
+              </div>
+              <div class="tech-item" title="Flutter">
+                <i class="devicon-flutter-plain"></i>
+              </div>
+              <div class="tech-item" title="Dart">
+                <i class="devicon-dart-plain"></i>
+              </div>
+              <div class="tech-item" title="Github">
                 <i class="devicon-github-plain"></i>
               </div>
               <div class="tech-item" title="Trello">
