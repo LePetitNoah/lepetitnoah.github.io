@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/LePetitNoah/lepetitnoah.github.io)
+
 ## Initialisation
 
 > Installer Ruby [Lien](https://rubyinstaller.org/)
