@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <title>Mon Portfolio | Contact</title>
+  </head>
+
+  <body>
+    <div class="orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="orb orb-4"></span>
+  <span class="orb orb-5"></span>
+  <span class="orb orb-6"></span>
+</div>
+ <header>
+  <button
+    class="hamburger-btn"
+    aria-label="Menu de navigation"
+    aria-expanded="false"
+  >
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </button>
+
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a href="/index.html">Accueil</a></li>
+      <li class="navbar-item">
+        <a href="/pages/about.html">À propos</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/skills.html">Compétences</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/projects.html">Projets</a>
+      </li>
+      <li class="navbar-item">
+        <a href="/pages/contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+      <section class="contact-section">
+        <h1 class="contact-title">
+          <i class="fas fa-envelope"></i>
+          Me Contacter
+        </h1>
+        <p class="contact-subtitle">
+          N'hésitez pas à me contacter pour toute question ou collaboration
+        </p>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2 class="info-title">
+              <i class="fas fa-paper-plane"></i>
+              Coordonnées
+            </h2>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Email</span>
+                <a href="mailto:mrcd.noah@gmail.com" class="info-value"
+                  >mrcd.noah@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">GitHub</span>
+                <a
+                  href="https://github.com/lepetitnoah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="info-value"
+                  >github.com/lepetitnoah</a
+                >
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">LinkedIn</span>
+                <a
+                  href="https://linkedin.com/in/noah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="info-value"
+                  >linkedin.com/in/noah</a
+                >
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Localisation</span>
+                <span class="info-value">Bourg-en-Bresse, France</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h2 class="form-title">
+              <i class="fas fa-paper-plane"></i>
+              Envoyez-moi un message
+            </h2>
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="votre@email.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Sujet</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Sujet de votre message"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Votre message..."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                Envoyer
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+  <div class="copyright-container">
+    <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+  </div>
+</footer>
+
+    <script src="/js/nav-active.js" defer></script>
+  </body>
+</html>
