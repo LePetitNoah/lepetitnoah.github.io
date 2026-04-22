@@ -1,0 +1,187 @@
+---
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/project-detail.css" />
+    <title>Mon Portfolio | Minecraft Mod Dependencies</title>
+  </head>
+
+  <body>
+    {% include orbs.html %} {% include header.html %}
+
+    <main>
+      <div class="project-layout">
+        <article class="project-detail">
+          <a href="/pages/projects.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour aux projets
+          </a>
+
+          <div class="project-hero">
+            <div class="project-header">
+              <h1 class="project-title">Minecraft Mod Dependencies</h1>
+              <div class="project-status">
+                <span class="project-badge en-cours">Terminé</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-year">
+                <i class="fas fa-calendar"></i>
+                2026 - Present
+              </span>
+            </div>
+          </div>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-info-circle"></i>
+              Description
+            </h2>
+            <div class="section-content">
+              <p>
+                Étant donné que je travaille actuellement sur un modpack
+                Minecraft, il m'arrive d'avoir des problèmes avec les
+                dépendances de certains mods ou alors, lorsque je supprime un
+                mod ses dépendances restent. C'est pourquoi j'ai décidé de créer
+                un petit projet en python pour m'aider à trouver les dépendances
+                des mods que j'utilise et m'aider à les visualiser.
+              </p>
+              <p>
+                J'utilise donc l'API mise à disposition par CurseForge pour
+                récupérer la liste des mods que j'utilise ainsi que leurs
+                dépendances. Je sauvegarde toutes les informations qui me
+                semblent utiles dans des fichiers en fonction de paramètres
+                comme la version de minecraft par exemple. Puis j'utilise toutes
+                les informations stockées pour créer une page web HTML avec
+                pyvis network pour générer un graphe intéractif. Il est aussi
+                possible d'afficher les informations sous forme de liste
+                hiérarchique dans la console à l'aide de la bibliothèque rich.
+              </p>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-lightbulb"></i>
+              Défis & Solutions
+            </h2>
+            <div class="challenge-solution-container">
+              <div class="challenge-item">
+                <h3>Défi</h3>
+                <p>
+                  Je dirais que le plus gros problème que j'ai rencontré est que
+                  l'API de CurseForge ne permet pas de récupérer les
+                  informations d'un mod à l'aide de son nom. Il est nécessaire
+                  d'utiliser son slug mais le problème est que pour certains
+                  mod, leur slug est différent de leur nom.
+                </p>
+              </div>
+              <div class="solution-item">
+                <h3>Solution trouvée</h3>
+                <p>
+                  J'ai donc décidé de créer un script en plus pour faciliter la
+                  recherche d'un slug à partir du nom du mod, de la version de
+                  minecraft et du type du mod loader. Avec tout ces paramètres
+                  il me reste plus qu'une sélection de quelque mod que j'affiche
+                  dans la console avec les informations nécessaires. Je n'ai
+                  plus qu'à trouver le bon et copier le slug pour ensuite
+                  récupérer ses dépandances.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-star"></i>
+              Compétences acquises
+            </h2>
+            <ul class="skills-list">
+              <li>Développement d'applications</li>
+              <li>Intégration d'API</li>
+              <li>Travail avec l'IA</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-images"></i>
+              Aperçu
+            </h2>
+            <div class="screenshots-grid">
+              <div class="screenshot-item">
+                <img
+                  src="/img/projects-img/personnel/minecraft-mod-dependencies/html.PNG"
+                  alt="Capture d'écran 1"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/projects-img/personnel/minecraft-mod-dependencies/console.png"
+                  alt="Capture d'écran 2"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside class="project-sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-link"></i>
+              Liens
+            </h3>
+            <div class="sidebar-links">
+              <a
+                href="https://github.com/LePetitNoah/minecraft-mod-dependencies"
+                class="sidebar-link sidebar-link-active"
+              >
+                <i class="fab fa-github"></i>
+                <span>Code source</span>
+              </a>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-globe"></i>
+                <span>Site web</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-file-alt"></i>
+                <span>Documentation</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-code"></i>
+              Technologies
+            </h3>
+            <div class="sidebar-techs">
+              <div class="tech-item" title="Kotlin">
+                <i class="devicon-kotlin-plain"></i>
+              </div>
+              <div class="tech-item" title="Android Studio">
+                <i class="devicon-androidstudio-plain"></i>
+              </div>
+              <div class="tech-item" title="Firebase">
+                <i class="devicon-firebase-plain"></i>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="copyright-container">
+        <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="/js/nav-active.js" defer></script>
+  </body>
+</html>
