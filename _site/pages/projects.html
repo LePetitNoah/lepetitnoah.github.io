@@ -203,11 +203,12 @@
               Il s'agit d'un projet pour aider les développeurs et modpackers à
               trouver les dépendances nécessaires à un mod et à le visualiser.
             </p>
-            <div class="project-tags">
+<div class="project-tags has-more-tags">
               <span class="tag">API</span>
               <span class="tag">Tool</span>
               <span class="tag">Minecraft</span>
               <span class="tag">Jeux</span>
+              <span class="tag-count">+</span>
             </div>
           </a>
 
@@ -334,5 +335,13 @@
     </footer>
 
     <script src="/js/nav-active.js" defer></script>
+    <script>
+      document.querySelectorAll(".project-tags").forEach((tagsContainer) => {
+        const tags = tagsContainer.querySelectorAll(".tag");
+        if (tags.length > 3) {
+          tagsContainer.classList.add("has-more-tags");
+        }
+      });
+    </script>
   </body>
 </html>

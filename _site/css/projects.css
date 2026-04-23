@@ -282,6 +282,29 @@ main {
   font-weight: 600;
 }
 
+/* Indicateur de nombre de tags supplémentaires */
+.tag-count {
+  display: none;
+  background: rgba(124, 106, 247, 0.15);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(124, 106, 247, 0.2);
+  margin-left: 0.2rem;
+}
+
+/* Affiche le compteur uniquement s'il y a 4+ tags */
+.has-more-tags .tag-count {
+  display: inline;
+}
+
+/* Masque le compteur au survol de la carte */
+.project-card:has(.has-more-tags):hover .tag-count {
+  opacity: 0;
+}
+
 .tag:hover {
   background: var(--color-primary);
   color: white;
