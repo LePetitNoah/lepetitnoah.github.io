@@ -10,17 +10,15 @@
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="AGENTS.md" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/AGENTS.html" />
-<meta property="og:url" content="http://localhost:4000/AGENTS.html" />
 <meta property="og:site_name" content="lepetitnoah.github.io" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="AGENTS.md" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"AGENTS.md","url":"http://localhost:4000/AGENTS.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"AGENTS.md","url":"/AGENTS.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=b159414be09b58e2fd3725e537c07cee0e196741">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e5b09ba27bcf943c5ef3a15c0ba0f3be31f2e5ef">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -36,106 +34,40 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       
-      <h1><a href="http://localhost:4000/">lepetitnoah.github.io</a></h1>
+      <h1><a href="/">lepetitnoah.github.io</a></h1>
       
 
       <h1 id="agentsmd">AGENTS.md</h1>
 
-<h2 id="project">Project</h2>
-
-<p>French personal portfolio. Jekyll + GitHub Pages, dark theme with animated orbs. All content is in French.</p>
-
 <h2 id="build-commands">Build Commands</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>                    <span class="c"># Install Ruby dependencies</span>
-bundle <span class="nb">exec </span>jekyll serve <span class="nt">--livereload</span> <span class="nt">--trace</span>  <span class="c"># Dev server (http://localhost:4000)</span>
-bundle <span class="nb">exec </span>jekyll build          <span class="c"># Production build → _site/</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--livereload</span> <span class="nt">--trace</span>  <span class="c"># Dev: http://localhost:4000</span>
+bundle <span class="nb">exec </span>jekyll build                        <span class="c"># Build → _site/</span>
 </code></pre></div></div>
 
-<p>Auto-deploys on push to <code class="language-plaintext highlighter-rouge">main</code> via GitHub Pages. No <code class="language-plaintext highlighter-rouge">_config.yml</code> (uses GitHub Pages defaults).</p>
+<p>Auto-deploys on push to <code class="language-plaintext highlighter-rouge">main</code> via GitHub Pages.</p>
 
-<h2 id="file-structure">File Structure</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_includes/      header.html, footer.html, orbs.html
-css/            common.css (variables), styles.css, about.css, skills.css, projects.css
-js/             nav-active.js, skills-animation.js
-pages/          about.html, skills.html, projects.html
-  └── projects/ personnel/, scolaire/
-templates/      project-detail.html
-_site/          Build output (do not edit, auto-deployed)
-</code></pre></div></div>
-
-<h2 id="css-conventions">CSS Conventions</h2>
+<h2 id="key-conventions">Key Conventions</h2>
 
 <ul>
-  <li>Variables in <code class="language-plaintext highlighter-rouge">css/common.css</code>: <code class="language-plaintext highlighter-rouge">--color-primary: #7c6af7</code>, fonts, spacing</li>
-  <li>2-space indentation, lowercase-hyphen naming</li>
-  <li>All colors/fonts via CSS custom properties</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;html lang="fr"&gt;</code> on all pages</li>
+  <li>Front matter <code class="language-plaintext highlighter-rouge">---</code> required on every template</li>
+  <li>CSS variables in <code class="language-plaintext highlighter-rouge">css/common.css</code>: <code class="language-plaintext highlighter-rouge">--color-primary: #7c6af7</code></li>
   <li>Include <code class="language-plaintext highlighter-rouge">prefers-reduced-motion</code> for animations</li>
+  <li><code class="language-plaintext highlighter-rouge">aria-label</code> on icon-only buttons, <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> on decorative</li>
 </ul>
 
-<h2 id="jekyll-templates">Jekyll Templates</h2>
+<h2 id="project-layout">Project Layout</h2>
 
-<ul>
-  <li>Front matter <code class="language-plaintext highlighter-rouge">---</code> required on every page</li>
-  <li>Includes: `&lt;header&gt;
-&lt;button
-  class=”hamburger-btn”
-  aria-label=”Menu de navigation”
-  aria-expanded=”false”
-    <blockquote>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_includes/    header.html, footer.html, orbs.html
+css/          common.css, styles.css, about.css, skills.css, projects.css
+js/           nav-active.js, skills-animation.js
+pages/        about.html, skills.html, projects.html
+templates/    project-detail.html
+</code></pre></div></div>
 
-      <p><i class="fas fa-bars"></i>
-  <i class="fas fa-times"></i>
-&lt;/button&gt;</p>
-    </blockquote>
-
-    <nav class="navbar">
-  <ul class="navbar-list">
-    <li class="navbar-item"><a href="/index.html">Accueil</a></li>
-    <li class="navbar-item">
-      <a href="/pages/about.html">À propos</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/pages/skills.html">Compétences</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/pages/projects.html">Projets</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/pages/contact.html">Contact</a>
-    </li>
-  </ul>
-</nav>
-  </li>
-</ul>
-<p>&lt;/header&gt;
-<code class="language-plaintext highlighter-rouge">, </code>&lt;footer&gt;</p>
-<div class="copyright-container">
-    <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
-  </div>
-<p>&lt;/footer&gt;
-`</p>
-<ul>
-  <li>Paths absolute: <code class="language-plaintext highlighter-rouge">/css/common.css</code>, <code class="language-plaintext highlighter-rouge">/js/nav-active.js</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;html lang="fr"&gt;</code> required</li>
-</ul>
-
-<h2 id="accessibility">Accessibility</h2>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">aria-label</code> on icon-only buttons</li>
-  <li><code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> on decorative elements (orbs)</li>
-  <li><code class="language-plaintext highlighter-rouge">focus-visible</code> for keyboard navigation</li>
-</ul>
-
-<h2 id="pending-work-see-roadmapmd">Pending Work (see ROADMAP.md)</h2>
-
-<ul>
-  <li>Complete school and personal projects</li>
-  <li>Add contact page, interests section, CV download</li>
-  <li>Show scroll indicator for projects with many tags</li>
-</ul>
+<p>Refer to <code class="language-plaintext highlighter-rouge">README.md</code> for setup, <code class="language-plaintext highlighter-rouge">ROADMAP.md</code> for pending work.</p>
 
 
       

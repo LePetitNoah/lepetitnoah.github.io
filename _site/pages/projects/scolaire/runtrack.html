@@ -174,12 +174,14 @@
                 <img
                   src="/img/project-placeholder.png"
                   alt="Capture d'écran 1"
+                  loading="lazy"
                 />
               </div>
               <div class="screenshot-item">
                 <img
                   src="/img/project-placeholder.png"
                   alt="Capture d'écran 2"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -236,6 +238,13 @@
           </div>
         </aside>
       </div>
+
+      <div class="screenshot-overlay" id="screenshotOverlay" role="dialog" aria-modal="true" aria-label="Aperçu en plein écran">
+        <button class="overlay-close" id="overlayClose" aria-label="Fermer l'aperçu">
+          <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="" id="overlayImage" />
+      </div>
     </main>
 
     <footer>
@@ -245,5 +254,6 @@
     </footer>
 
     <script src="/js/nav-active.js" defer></script>
+    <script src="/js/screenshot-overlay.js" defer></script>
   </body>
 </html>
