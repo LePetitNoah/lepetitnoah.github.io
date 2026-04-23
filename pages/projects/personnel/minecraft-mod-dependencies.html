@@ -44,26 +44,27 @@
             </h2>
             <div class="section-content">
               <p>
-                Étant donné que je travaille actuellement sur un modpack
-                Minecraft, il m'arrive d'avoir des problèmes avec les
-                dépendances de certains mods ou alors, lorsque je supprime un
-                mod ses dépendances restent. C'est pourquoi j'ai décidé de créer
-                un petit projet en python pour m'aider à trouver les dépendances
-                des mods que j'utilise et m'aider à les visualiser.
+                Comme je développe actuellement un modpack pour Minecraft, je
+                rencontre parfois des difficultés liées aux dépendances de
+                certains mods. Il arrive notamment que des dépendances
+                persistent même après la suppression d’un mod. Pour remédier à
+                cela, j’ai entrepris de créer un petit outil en Python capable
+                d’identifier et de visualiser les relations de dépendance entre
+                les mods que j’utilise.
               </p>
               <p>
-                J'utilise donc l'API mise à disposition par CurseForge pour
-                récupérer la liste des mods que j'utilise ainsi que leurs
-                dépendances. Je sauvegarde toutes les informations qui me
-                semblent utiles dans des fichiers en fonction de paramètres
-                comme la version de minecraft par exemple. Puis j'utilise toutes
-                les informations stockées pour créer une page web HTML avec
-                pyvis network pour générer un graphe intéractif. Il est aussi
-                possible d'afficher les informations sous forme de liste
-                hiérarchique dans la console à l'aide de la bibliothèque rich.
-                Récemment j'ai aussi ajouté un script python qui lance un
-                serveur local pour permettre d'utiliser une interface
-                utilisateur pour rechercher les dépendances d'un mod.
+                Pour ce faire, je m’appuie sur l’API proposée par CurseForge
+                afin de récupérer la liste de mes mods ainsi que leurs
+                dépendances associées. Les données pertinentes sont ensuite
+                enregistrées dans des fichiers, organisés selon différents
+                critères comme la version de Minecraft. À partir de ces
+                informations, je génère une page web en HTML intégrant un graphe
+                interactif grâce à PyVis Network. Il est également possible de
+                consulter ces données sous forme d’arborescence directement dans
+                la console, en utilisant la bibliothèque Rich. Plus récemment,
+                j’ai ajouté un script Python qui lance un serveur local,
+                permettant d’accéder à une interface utilisateur pour rechercher
+                plus facilement les dépendances d’un mod.
               </p>
             </div>
           </section>
@@ -77,23 +78,24 @@
               <div class="challenge-item">
                 <h3>Défi</h3>
                 <p>
-                  Je dirais que le plus gros problème que j'ai rencontré est que
-                  l'API de CurseForge ne permet pas de récupérer les
-                  informations d'un mod à l'aide de son nom. Il est nécessaire
-                  d'utiliser son slug mais le problème est que pour certains
-                  mod, leur slug est différent de leur nom.
+                  La principale difficulté à laquelle j’ai été confronté
+                  concerne l’API de CurseForge, qui ne permet pas d’obtenir les
+                  informations d’un mod à partir de son nom. Il faut en effet
+                  utiliser son “slug”, ce qui pose problème puisque celui-ci ne
+                  correspond pas toujours au nom du mod.
                 </p>
               </div>
               <div class="solution-item">
                 <h3>Solution trouvée</h3>
                 <p>
-                  J'ai donc décidé de créer un script en plus pour faciliter la
-                  recherche d'un slug à partir du nom du mod, de la version de
-                  minecraft et du type du mod loader. Avec tout ces paramètres
-                  il me reste plus qu'une sélection de quelque mod que j'affiche
-                  dans la console avec les informations nécessaires. Je n'ai
-                  plus qu'à trouver le bon et copier le slug pour ensuite
-                  récupérer ses dépandances.
+                  Pour contourner cette contrainte, j’ai développé un script
+                  supplémentaire destiné à retrouver le slug à partir du nom du
+                  mod, de la version de Minecraft et du type de mod loader
+                  utilisé. Grâce à ces paramètres, je peux réduire les résultats
+                  à une sélection restreinte de mods, affichée dans la console
+                  avec les informations essentielles. Il me suffit ensuite
+                  d’identifier le bon mod, de copier son slug et de récupérer
+                  ses dépendances.
                 </p>
               </div>
             </div>
