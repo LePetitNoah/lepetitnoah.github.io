@@ -1,0 +1,208 @@
+---
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/project-detail.css" />
+    <title>Mon Portfolio | Texture Maker</title>
+  </head>
+
+  <body>
+    {% include orbs.html %} {% include header.html %}
+
+    <main>
+      <div class="project-layout">
+        <article class="project-detail">
+          <a href="/pages/projects.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Retour aux projets
+          </a>
+
+          <div class="project-hero">
+            <div class="project-header">
+              <h1 class="project-title">Texture Maker</h1>
+              <div class="project-status">
+                <span class="project-badge termine">Terminé</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-year">
+                <i class="fas fa-calendar"></i>
+                2026
+              </span>
+            </div>
+          </div>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-info-circle"></i>
+              Description
+            </h2>
+            <div class="section-content">
+              <p>
+                Texture Maker est un petit site web conçu pour m’accompagner et
+                simplifier la création de textures Minecraft pour mes Mods et
+                Modpacks. Il m’a paru naturel de le rendre accessible à tous,
+                c’est à la fois une manière de partager mon travail et une
+                opportunité de recueillir des retours utilisateurs afin
+                d’améliorer continuellement cet outil.
+              </p>
+              <p>
+                Il a été développé en HTML/CSS/JS et une pointe de Python a été
+                ajouté pour me faciliter la vie.
+              </p>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-lightbulb"></i>
+              Défis & Solutions
+            </h2>
+            <div class="challenge-solution-container">
+              <div class="challenge-item">
+                <h3>Défi</h3>
+                <p>
+                  Le principal enjeu de ce projet a été de concevoir une
+                  expérience utilisateur réellement agréable. Lorsqu’on utilise
+                  un outil, c’est avant tout pour simplifier son quotidien; un
+                  logiciel qui complique la tâche de ses utilisateurs a peu de
+                  chances de perdurer. Il était donc essentiel d’accorder une
+                  attention particulière à l’interface homme-machine afin de
+                  garantir une utilisation fluide, intuitive et plaisante. Par
+                  ailleurs, le projet n’étant pas particulièrement axé sur la
+                  technicité, cela représentait une excellente opportunité
+                  d’approfondir davantage les aspects liés à l’UX.
+                </p>
+              </div>
+              <div class="solution-item">
+                <h3>Solution trouvée</h3>
+                <p>
+                  Pour atteindre cet objectif, une seule méthode s’impose :
+                  tester encore et encore. Chaque bouton et chaque interaction
+                  ont fait l’objet d’une réflexion approfondie afin de
+                  déterminer si l’expérience proposée était appréciée par
+                  l’utilisateur. Ce travail m’a permis de revisiter les notions
+                  d’UI et d’UX étudiées en troisième année afin d’en tirer le
+                  meilleur parti. Les ressources proposées par Figma ainsi que
+                  par Lucid Software ont également joué un rôle déterminant dans
+                  mes choix de conception et de développement. À mon sens, le
+                  résultat obtenu est satisfaisant. Bien entendu, le projet
+                  reste perfectible et comporte probablement certaines
+                  incohérences en matière d’UI ou d’UX, mais je considère que
+                  l’expérience utilisateur proposée est globalement réussie.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-star"></i>
+              Compétences acquises
+            </h2>
+            <ul class="skills-list">
+              <li>Développement d'applications web</li>
+              <li>UI & UX</li>
+              <li>Travail en autonomie</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-subtitle">
+              <i class="fas fa-images"></i>
+              Aperçu
+            </h2>
+            <div class="screenshots-grid">
+              <div class="screenshot-item">
+                <img
+                  src="/img/project-placeholder.png"
+                  alt="Capture d'écran 1"
+                  loading="lazy"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/project-placeholder.png"
+                  alt="Capture d'écran 2"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <div
+          class="screenshot-overlay"
+          id="screenshotOverlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Aperçu en plein écran"
+        >
+          <button
+            class="overlay-close"
+            id="overlayClose"
+            aria-label="Fermer l'aperçu"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+          <img src="" alt="" id="overlayImage" />
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-link"></i>
+              Liens
+            </h3>
+            <div class="sidebar-links">
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fab fa-github"></i>
+                <span>Code source</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-globe"></i>
+                <span>Site web</span>
+              </span>
+              <span class="sidebar-link sidebar-link-inactive">
+                <i class="fas fa-file-alt"></i>
+                <span>Documentation</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">
+              <i class="fas fa-code"></i>
+              Technologies
+            </h3>
+            <div class="sidebar-techs">
+              <div class="tech-item" title="Kotlin">
+                <i class="devicon-kotlin-plain"></i>
+              </div>
+              <div class="tech-item" title="Android Studio">
+                <i class="devicon-androidstudio-plain"></i>
+              </div>
+              <div class="tech-item" title="Firebase">
+                <i class="devicon-firebase-plain"></i>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="copyright-container">
+        <p class="copyright">© 2026 Mon Portfolio. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="/js/nav-active.js" defer></script>
+    <script src="/js/screenshot-overlay.js" defer></script>
+  </body>
+</html>
