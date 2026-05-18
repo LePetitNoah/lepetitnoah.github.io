@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/project-detail.css" />
-    <title>Mon Portfolio | Nom du projet</title>
+    <title>Mon Portfolio | Neuron</title>
   </head>
 
   <body>
@@ -24,7 +24,7 @@
 
           <div class="project-hero">
             <div class="project-header">
-              <h1 class="project-title">Nom du Projet</h1>
+              <h1 class="project-title">Neuron</h1>
               <div class="project-status">
                 <span class="project-badge en-cours">En cours</span>
               </div>
@@ -32,7 +32,7 @@
             <div class="project-meta">
               <span class="project-year">
                 <i class="fas fa-calendar"></i>
-                2024 - Present
+                2026 - Present
               </span>
             </div>
           </div>
@@ -44,12 +44,28 @@
             </h2>
             <div class="section-content">
               <p>
-                Description détaillée du projet. Expliquez le contexte, les
-                objectifs et ce que vous avez accompli.
+                Neuron est un outil permettant aux utilisateurs de regrouper en
+                un seul endroit toutes les ressources qui leur semblent
+                intéressantes et utiles. Que se soit des pages webs, des
+                applications ou encore des IA, Neuron permet de les organiser et
+                de les retrouver facilement grâce à sa barre de recherche ainsi
+                que les différents tags que vous pouvez ajouter à chacun de vos
+                tools.
               </p>
               <p>
-                Paragraphe supplémentaire pour approfondir certains aspects du
-                projet.
+                Le projet a été développé en HTML/CSS/JS et node js pour la
+                sauvegarde de données. Une fois le projet de base fonctionnel,
+                j'ai utilisé l'IA pour faire une review de mon projet afin
+                d'avoir un plan des points à améliorer concernant l'UX, les
+                performances ou encore la sécurité. Une fois le projet
+                "terminé", j'ai décidé de le conteneuriser grâce à Docker afin
+                de pouvoir le déployer facilement sur n'importe quelle machine.
+              </p>
+              <p>
+                Neuron est actuellement dans une version alpha. Le site se
+                déploie uniquement en local pour le moment. A termes, le but est
+                de mettre à disposition une version hébergée pour que tout le
+                monde puisse en profiter.
               </p>
             </div>
           </section>
@@ -62,11 +78,16 @@
             <div class="challenge-solution-container">
               <div class="challenge-item">
                 <h3>Défi</h3>
-                <p>Description du défi rencontré.</p>
+                <p>
+                  Étant donné qu'il ne s'agit que de la version alpha, il y a
+                  encore beaucoup de fonctionnalités à ajouter et
+                  d'améliorations à faire. Je garde donc cette partie pour plus
+                  tard.
+                </p>
               </div>
               <div class="solution-item">
                 <h3>Solution trouvée</h3>
-                <p>Comment vous avez résolu le problème.</p>
+                <p>...</p>
               </div>
             </div>
           </section>
@@ -77,8 +98,11 @@
               Compétences acquises
             </h2>
             <ul class="skills-list">
-              <li>Développement d'applications mobiles</li>
-              <li>Intégration d'APIs d'intelligence artificielle</li>
+              <li>Développement d'applications web</li>
+              <li>Construction d'une API</li>
+              <li>Utilisation de l'IA</li>
+              <li>Déploiement d'une image docker</li>
+              <li>Mise en place de tests</li>
               <li>Travail en autonomie sur un projet long terme</li>
             </ul>
           </section>
@@ -91,15 +115,36 @@
             <div class="screenshots-grid">
               <div class="screenshot-item">
                 <img
-                  src="/img/project-placeholder.png"
+                  src="/img/projects-img/personnel/neuron/home.png"
                   alt="Capture d'écran 1"
                   loading="lazy"
                 />
               </div>
               <div class="screenshot-item">
                 <img
-                  src="/img/project-placeholder.png"
+                  src="/img/projects-img/personnel/neuron/modal.png"
                   alt="Capture d'écran 2"
+                  loading="lazy"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/projects-img/personnel/neuron/research.png"
+                  alt="Capture d'écran 3"
+                  loading="lazy"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/projects-img/personnel/neuron/tags.png"
+                  alt="Capture d'écran 4"
+                  loading="lazy"
+                />
+              </div>
+              <div class="screenshot-item">
+                <img
+                  src="/img/projects-img/personnel/neuron/favorites.png"
+                  alt="Capture d'écran 5"
                   loading="lazy"
                 />
               </div>
@@ -113,19 +158,23 @@
               <i class="fas fa-link"></i>
               Liens
             </h3>
+
             <div class="sidebar-links">
-              <span class="sidebar-link sidebar-link-inactive">
-                <i class="fab fa-github"></i>
+              <a
+                class="sidebar-link sidebar-link-active"
+                href="https://gitlab.com/cortex-website/neuron-tool"
+              >
+                <i class="fab fa-gitlab"></i>
                 <span>Code source</span>
-              </span>
-              <span class="sidebar-link sidebar-link-inactive">
-                <i class="fas fa-globe"></i>
-                <span>Site web</span>
-              </span>
-              <span class="sidebar-link sidebar-link-inactive">
-                <i class="fas fa-file-alt"></i>
-                <span>Documentation</span>
-              </span>
+              </a>
+
+              <a
+                class="sidebar-link sidebar-link-active"
+                href="https://hub.docker.com/r/primorion/neuron"
+              >
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </a>
             </div>
           </div>
 
@@ -135,22 +184,44 @@
               Technologies
             </h3>
             <div class="sidebar-techs">
-              <div class="tech-item" title="Kotlin">
-                <i class="devicon-kotlin-plain"></i>
+              <div class="tech-item" title="HTML">
+                <i class="devicon-html5-plain"></i>
               </div>
-              <div class="tech-item" title="Android Studio">
-                <i class="devicon-androidstudio-plain"></i>
+              <div class="tech-item" title="CSS">
+                <i class="devicon-css3-plain"></i>
               </div>
-              <div class="tech-item" title="Firebase">
-                <i class="devicon-firebase-plain"></i>
+              <div class="tech-item" title="JavaScript">
+                <i class="devicon-javascript-plain"></i>
+              </div>
+              <div class="tech-item" title="Node JS">
+                <i class="devicon-nodejs-plain"></i>
+              </div>
+              <div class="tech-item" title="Vitest">
+                <i class="devicon-vitest-plain"></i>
+              </div>
+              <div class="tech-item" title="Docker">
+                <i class="devicon-docker-plain"></i>
+              </div>
+              <div class="tech-item" title="Gitlab">
+                <i class="devicon-gitlab-plain"></i>
               </div>
             </div>
           </div>
         </aside>
       </div>
 
-      <div class="screenshot-overlay" id="screenshotOverlay" role="dialog" aria-modal="true" aria-label="Aperçu en plein écran">
-        <button class="overlay-close" id="overlayClose" aria-label="Fermer l'aperçu">
+      <div
+        class="screenshot-overlay"
+        id="screenshotOverlay"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Aperçu en plein écran"
+      >
+        <button
+          class="overlay-close"
+          id="overlayClose"
+          aria-label="Fermer l'aperçu"
+        >
           <i class="fas fa-times"></i>
         </button>
         <img src="" alt="" id="overlayImage" />
